@@ -14,6 +14,7 @@
   const state = {
     mode: 'coldcall', // 'coldcall' | 'closer' | 'cbfleads'
     coldcallSubmode: 'first_touch', // 'first_touch' | 'followup'
+    cbfSubmode: 'screening', // 'screening' | 'closer' | 'offramp'
     isRitualActive: false,
     activeBlockIndex: 0,
     fontBasePx: 18, // Max zoom-out level on start
@@ -35,9 +36,30 @@
       recoveredRevenue: 100000
     },
 
+    // CBF Subprime Risk Tax Math
+    cbfRiskTax: {
+      vehiclePrice: 200000,
+      primeRate: 12.0,
+      subprimeRate: 24.25,
+      months: 72,
+      monthlyTax: 1372,
+      annualTax: 16464,
+      totalTax: 98784
+    },
+
     // Timer State (Closer Mode - Timestamp-driven)
     timer: {
       totalDurationMs: 15 * 60 * 1000, // 15 minutes
+      isRunning: false,
+      startedAt: null,
+      elapsedMs: 0,
+      timerId: null,
+      lastRPressTime: 0
+    },
+
+    // CBF Timer State (Timestamp-driven)
+    cbfTimer: {
+      totalDurationMs: 15 * 60 * 1000, // 15 minutes default for Closer (3 min for Screening)
       isRunning: false,
       startedAt: null,
       elapsedMs: 0,
@@ -118,6 +140,11 @@
     if (state.mode === 'coldcall' && state.coldcallSubmode === 'followup') {
       return 'coldcall_followup';
     }
+    if (state.mode === 'cbfleads') {
+      if (state.cbfSubmode === 'screening') return 'cbf_screening';
+      if (state.cbfSubmode === 'offramp') return 'cbf_offramp';
+      return 'cbf_closer';
+    }
     return state.mode;
   }
 
@@ -145,7 +172,7 @@
     return SCRIPT_DATA.objections || [];
   }
 
-  const SCRIPT_SCHEMA_VERSION = '5.4';
+  const SCRIPT_SCHEMA_VERSION = '6.2';
 
   function loadDataForCurrentMode() {
     try {
@@ -154,10 +181,16 @@
         localStorage.removeItem('dealership_cockpit_blocks_coldcall_followup');
         localStorage.removeItem('dealership_cockpit_blocks_closer');
         localStorage.removeItem('dealership_cockpit_blocks_cbfleads');
+        localStorage.removeItem('dealership_cockpit_blocks_cbf_closer');
+        localStorage.removeItem('dealership_cockpit_blocks_cbf_screening');
+        localStorage.removeItem('dealership_cockpit_blocks_cbf_offramp');
         localStorage.removeItem('dealership_cockpit_objs_coldcall');
         localStorage.removeItem('dealership_cockpit_objs_coldcall_followup');
         localStorage.removeItem('dealership_cockpit_objs_closer');
         localStorage.removeItem('dealership_cockpit_objs_cbfleads');
+        localStorage.removeItem('dealership_cockpit_objs_cbf_closer');
+        localStorage.removeItem('dealership_cockpit_objs_cbf_screening');
+        localStorage.removeItem('dealership_cockpit_objs_cbf_offramp');
         localStorage.setItem('dealership_cockpit_schema_ver', SCRIPT_SCHEMA_VERSION);
       }
     } catch (e) {}
@@ -361,7 +394,7 @@
             saveBlocksLocally();
           });
         } else {
-          cueText.innerHTML = `👂 ${formatBlockTextWithDiff(block.cue || '', defaultBlock ? defaultBlock.cue : null)}`;
+          cueText.innerHTML = `${state.mode === 'cbfleads' ? '' : '👂 '}${formatBlockTextWithDiff(block.cue || '', defaultBlock ? defaultBlock.cue : null)}`;
         }
         cueEl.appendChild(cueText);
         blockEl.appendChild(cueEl);
@@ -371,7 +404,7 @@
       if (block.stageNote || state.isEditing) {
         const noteEl = document.createElement('div');
         noteEl.className = 'stage-note';
-        noteEl.innerHTML = `<span>🎯</span> `;
+        noteEl.innerHTML = state.mode === 'cbfleads' ? '' : `<span>🎯</span> `;
         const noteSpan = document.createElement('span');
         if (state.isEditing) {
           noteSpan.contentEditable = 'true';
@@ -419,6 +452,17 @@
     html = html.replace(/\{\{annual_bleed\}\}/g, `<span class="token" data-token="annual_bleed">${formatRand(state.math.annualBleed)}</span>`);
     html = html.replace(/\{\{recovered_units\}\}/g, `<span class="token" data-token="recovered_units">${state.math.recoveredUnits}</span>`);
     html = html.replace(/\{\{recovered_revenue\}\}/g, `<span class="token" data-token="recovered_revenue">${formatRand(state.math.recoveredRevenue)}</span>`);
+
+    // CBF Subprime Risk Tax Tokens
+    if (state.cbfRiskTax) {
+      html = html.replace(/\{\{vehicle_price\}\}/g, `<span class="token" data-token="vehicle_price">${formatRand(state.cbfRiskTax.vehiclePrice)}</span>`);
+      html = html.replace(/\{\{prime_rate\}\}/g, `<span class="token" data-token="prime_rate">${state.cbfRiskTax.primeRate}%</span>`);
+      html = html.replace(/\{\{subprime_rate\}\}/g, `<span class="token" data-token="subprime_rate">${state.cbfRiskTax.subprimeRate}%</span>`);
+      html = html.replace(/\{\{risk_tax_monthly\}\}/g, `<span class="token" data-token="risk_tax_monthly">${formatRand(state.cbfRiskTax.monthlyTax)}</span>`);
+      html = html.replace(/\{\{risk_tax_annual\}\}/g, `<span class="token" data-token="risk_tax_annual">${formatRand(state.cbfRiskTax.annualTax)}</span>`);
+      html = html.replace(/\{\{risk_tax_total\}\}/g, `<span class="token" data-token="risk_tax_total">${formatRand(state.cbfRiskTax.totalTax)}</span>`);
+    }
+
     return html;
   }
 
@@ -550,6 +594,72 @@
     if (activeEl) {
       scrollBlockToWebcamEyeLine(activeEl);
     }
+    renderCbfStepper();
+  }
+
+  // Universal beat stepper: grouped progress dots + Back/Next across all workspaces
+  function renderCbfStepper() {
+    const el = document.getElementById('app-stepper') || document.getElementById('cbf-stepper');
+    if (!el) return;
+    if (state.mode === 'coldcall' && state.isRitualActive) {
+      el.style.display = 'none';
+      return;
+    }
+    el.style.display = 'block';
+
+    const blocks = state.blocks || [];
+    if (!blocks.length) {
+      el.innerHTML = '';
+      return;
+    }
+
+    const groups = [];
+    const isCbfCloser = state.mode === 'cbfleads' && (state.cbfSubmode || 'screening') === 'closer';
+    const isDealerCloser = state.mode === 'closer';
+    const closerDotLabels = ['C', 'L', 'O', 'S1', 'S2', 'E1', 'E2', 'R'];
+
+    blocks.forEach((b, i) => {
+      let g = (b.phaseName || ('Phase ' + (b.phase || 1))).trim();
+      let grp = groups[groups.length - 1];
+      if (!grp || grp.name !== g) { grp = { name: g, items: [] }; groups.push(grp); }
+      grp.items.push(i);
+    });
+
+    const cur = state.activeBlockIndex;
+    const curBlock = blocks[cur] || {};
+    const curPhase = curBlock.phaseName || '';
+
+    el.innerHTML = `
+      <div class="stp-top">
+        <span class="stp-count">
+          Beat <strong>${cur + 1}</strong> of ${blocks.length}
+          ${curPhase ? `&middot; <span style="color: var(--cbf-accent); font-weight: 600;">${escapeHtml(curPhase)}</span>` : ''}
+        </span>
+        <span class="stp-nav">
+          <button class="stp-btn" id="stp-back" ${cur === 0 ? 'disabled' : ''}>Back <kbd>&larr;</kbd></button>
+          <button class="stp-btn stp-btn-primary" id="stp-next" ${cur >= blocks.length - 1 ? 'disabled' : ''}>Next <kbd>&rarr;</kbd></button>
+        </span>
+      </div>
+      <div class="stp-groups">
+        ${groups.map(g => `
+          <div class="stp-group">
+            <div class="stp-group-name">${escapeHtml(g.name)}</div>
+            <div class="stp-dots">
+              ${g.items.map(i => {
+                let label = i + 1;
+                if (isCbfCloser && closerDotLabels[i]) {
+                  label = closerDotLabels[i];
+                }
+                const title = escapeHtml(blocks[i].section || blocks[i].phaseName || '');
+                return `<button class="stp-dot ${i < cur ? 'done' : ''} ${i === cur ? 'current' : ''}" data-idx="${i}" title="${title}">${label}</button>`;
+              }).join('')}
+            </div>
+          </div>`).join('')}
+      </div>`;
+    el.querySelectorAll('.stp-dot').forEach(d => d.addEventListener('click', () => setActiveBlock(parseInt(d.dataset.idx, 10))));
+    const back = el.querySelector('#stp-back'), next = el.querySelector('#stp-next');
+    if (back) back.addEventListener('click', () => stepBlock(-1));
+    if (next) next.addEventListener('click', () => stepBlock(1));
   }
 
   function scrollBlockToWebcamEyeLine(blockEl) {
@@ -589,13 +699,29 @@
   const objSlotScript = document.getElementById('obj-slot-script');
 
   function showObjection(objId) {
+    const currentKey = getCurrentSubKey();
     const objs = (state.objections && state.objections.length) ? state.objections : getMasterObjections(state.mode);
-    const obj = objs.find(o => o.id === objId);
+    const failBranches = (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[currentKey] && SCRIPT_DATA[currentKey].failBranches)
+      ? SCRIPT_DATA[currentKey].failBranches
+      : ((typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[state.mode] && SCRIPT_DATA[state.mode].failBranches) ? SCRIPT_DATA[state.mode].failBranches : []);
+
+    let obj = objs.find(o => o.id === objId);
+    let isFail = false;
+    if (!obj) {
+      obj = failBranches.find(f => f.id === objId);
+      if (obj) isFail = true;
+    }
     if (!obj) return;
 
     state.activeObjectionId = objId;
 
-    if (state.isEditing) {
+    if (isFail) {
+      fixedObjSlot.classList.add('is-fail-branch');
+    } else {
+      fixedObjSlot.classList.remove('is-fail-branch');
+    }
+
+    if (state.isEditing && !isFail) {
       objSlotTitle.contentEditable = 'true';
       objSlotTitle.spellcheck = false;
       objSlotTitle.innerText = obj.title;
@@ -625,7 +751,7 @@
       };
     } else {
       objSlotTitle.contentEditable = 'false';
-      objSlotTitle.textContent = obj.title;
+      objSlotTitle.textContent = (isFail ? 'Fail branch: ' : '') + obj.title;
       objSlotTitle.oninput = null;
 
       objSlotSummary.contentEditable = 'false';
@@ -648,6 +774,7 @@
   function dismissObjection() {
     state.activeObjectionId = null;
     fixedObjSlot.classList.remove('visible');
+    fixedObjSlot.classList.remove('is-fail-branch');
     document.querySelectorAll('.obj-btn').forEach(btn => btn.classList.remove('active-obj'));
   }
 
@@ -678,11 +805,12 @@
   function renderObjectionButtons() {
     const container = document.getElementById('objection-triggers-container');
     if (!container) return;
+    const currentKey = getCurrentSubKey();
     const objs = (state.objections && state.objections.length) ? state.objections : getMasterObjections(state.mode);
 
     container.innerHTML = `
       <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
-        Cards
+        ${state.mode === 'cbfleads' ? 'Objections' : 'Cards'}
       </div>
     `;
 
@@ -757,6 +885,51 @@
 
       container.appendChild(row);
     });
+
+    // Standby Fail Branches in Sidebar
+    const failBranches = (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[currentKey] && SCRIPT_DATA[currentKey].failBranches)
+      ? SCRIPT_DATA[currentKey].failBranches
+      : ((typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[state.mode] && SCRIPT_DATA[state.mode].failBranches) ? SCRIPT_DATA[state.mode].failBranches : []);
+
+    if (failBranches && failBranches.length > 0) {
+      const failSection = document.createElement('div');
+      failSection.className = 'fail-branches-section';
+      failSection.innerHTML = `
+        <div class="fail-branch-header">
+          <span>Fail branches</span><span class="fail-branch-sub">Standby</span>
+        </div>
+      `;
+
+      failBranches.forEach(fb => {
+        const row = document.createElement('div');
+        row.className = 'obj-item-row';
+
+        const btn = document.createElement('button');
+        btn.className = 'obj-btn fail-branch-btn';
+        if (state.activeObjectionId === fb.id) {
+          btn.classList.add('active-obj');
+        }
+        btn.dataset.objId = fb.id;
+        btn.innerHTML = `
+          <span class="obj-btn-title" style="color: #FCA5A5;">${escapeHtml(fb.title)}</span>
+          <div class="obj-btn-actions">
+            <span class="hotkey-badge-fail">${escapeHtml(fb.triggerKey)}</span>
+          </div>
+        `;
+
+        btn.addEventListener('click', () => {
+          if (state.activeObjectionId === fb.id) {
+            dismissObjection();
+          } else {
+            showObjection(fb.id);
+          }
+        });
+        row.appendChild(btn);
+        failSection.appendChild(row);
+      });
+
+      container.appendChild(failSection);
+    }
 
     // In edit mode, add a button to add a new objection card
     if (state.isEditing) {
@@ -1220,12 +1393,19 @@
 
     if (brandBadge) {
       if (newMode === 'coldcall') {
-        brandBadge.textContent = state.coldcallSubmode === 'followup' ? '📞 Cold Call • Follow-Up' : '📞 Cold Call • First Touch';
+        brandBadge.textContent = state.coldcallSubmode === 'followup' ? 'Cold Call · Follow-Up' : 'Cold Call · First Touch';
       } else if (newMode === 'cbfleads') {
-        brandBadge.textContent = '🚗 CBF Leads';
+        brandBadge.textContent = 'CBF Leads';
       } else {
         brandBadge.textContent = 'Dealership Live Sales';
       }
+    }
+
+    const wsCurrentName = document.getElementById('ws-current-name');
+    if (wsCurrentName) {
+      if (newMode === 'coldcall') wsCurrentName.textContent = 'Cold Call';
+      else if (newMode === 'closer') wsCurrentName.textContent = 'Dealer Closer';
+      else if (newMode === 'cbfleads') wsCurrentName.textContent = 'CBF Leads';
     }
 
     // Dynamic HUD notes context for CBF Leads vs Dealer
@@ -1253,6 +1433,8 @@
     if (newMode === 'closer') {
       calculateMath();
       resetTimer();
+    } else if (newMode === 'cbfleads') {
+      setCbfSubmode(state.cbfSubmode || 'closer');
     }
   }
 
@@ -1465,6 +1647,212 @@
   if (btnTimerReset) btnTimerReset.addEventListener('click', resetTimer);
 
   // =========================================================================
+  // CBF LEADS SUBMODE CONTROLLER & SECTION NAVIGATION
+  // =========================================================================
+  const btnCbfSecCloser = document.getElementById('btn-cbf-sec-closer');
+  const btnCbfSecScreening = document.getElementById('btn-cbf-sec-screening');
+  const btnCbfSecOfframp = document.getElementById('btn-cbf-sec-offramp');
+  const subnavCbfCloser = document.getElementById('subnav-cbf-closer');
+  const subnavCbfScreening = document.getElementById('subnav-cbf-screening');
+  const subnavCbfOfframp = document.getElementById('subnav-cbf-offramp');
+
+  function updateCbfSubnavPills() {
+    const sub = state.cbfSubmode || 'closer';
+    document.body.classList.toggle('cbf-submode-closer', sub === 'closer');
+    document.body.classList.toggle('cbf-submode-screening', sub === 'screening');
+    document.body.classList.toggle('cbf-submode-offramp', sub === 'offramp');
+
+    if (btnCbfSecCloser) btnCbfSecCloser.classList.toggle('active', sub === 'closer');
+    if (btnCbfSecScreening) btnCbfSecScreening.classList.toggle('active', sub === 'screening');
+    if (btnCbfSecOfframp) btnCbfSecOfframp.classList.toggle('active', sub === 'offramp');
+
+    if (subnavCbfCloser) subnavCbfCloser.classList.toggle('active', sub === 'closer');
+    if (subnavCbfScreening) subnavCbfScreening.classList.toggle('active', sub === 'screening');
+    if (subnavCbfOfframp) subnavCbfOfframp.classList.toggle('active', sub === 'offramp');
+
+    if (brandBadge && state.mode === 'cbfleads') {
+      if (sub === 'screening') {
+        brandBadge.textContent = 'CBF Leads · Screening';
+      } else if (sub === 'offramp') {
+        brandBadge.textContent = 'CBF Leads · Off-Ramp';
+      } else {
+        brandBadge.textContent = 'CBF Leads · Closer';
+      }
+    }
+  }
+
+  function setCbfSubmode(submode) {
+    state.cbfSubmode = submode;
+    try {
+      localStorage.setItem('dealership_cockpit_cbf_submode', submode);
+    } catch (e) {}
+
+    updateCbfSubnavPills();
+
+    // Reset CBF Timer for current section
+    if (submode === 'screening') {
+      state.cbfTimer.totalDurationMs = 3 * 60 * 1000;
+    } else {
+      state.cbfTimer.totalDurationMs = 15 * 60 * 1000;
+    }
+    resetCbfTimer();
+
+    dismissObjection();
+    loadDataForCurrentMode();
+    renderScript();
+    setActiveBlock(0);
+    renderObjectionButtons();
+
+    if (submode === 'closer') {
+      calculateRiskTax();
+    }
+  }
+
+  if (btnCbfSecCloser) btnCbfSecCloser.addEventListener('click', () => setCbfSubmode('closer'));
+  if (btnCbfSecScreening) btnCbfSecScreening.addEventListener('click', () => setCbfSubmode('screening'));
+  if (btnCbfSecOfframp) btnCbfSecOfframp.addEventListener('click', () => setCbfSubmode('offramp'));
+
+  if (subnavCbfCloser) subnavCbfCloser.addEventListener('click', () => setCbfSubmode('closer'));
+  if (subnavCbfScreening) subnavCbfScreening.addEventListener('click', () => setCbfSubmode('screening'));
+  if (subnavCbfOfframp) subnavCbfOfframp.addEventListener('click', () => setCbfSubmode('offramp'));
+
+  // =========================================================================
+  // CBF SUBPRIME RISK TAX CALCULATOR
+  // =========================================================================
+  const inputCbfVehiclePrice = document.getElementById('input-cbf-vehicle-price');
+  const inputCbfPrimeRate = document.getElementById('input-cbf-prime-rate');
+  const inputCbfSubprimeRate = document.getElementById('input-cbf-subprime-rate');
+  const inputCbfMonths = document.getElementById('input-cbf-months');
+  const hudCbfMonthlyTax = document.getElementById('hud-cbf-monthly-tax');
+  const hudCbfAnnualTax = document.getElementById('hud-cbf-annual-tax');
+  const hudCbfTotalTax = document.getElementById('hud-cbf-total-tax');
+
+  function calculateRiskTax() {
+    if (!inputCbfVehiclePrice || !inputCbfPrimeRate || !inputCbfSubprimeRate || !inputCbfMonths) return;
+
+    const P = parseFloat(inputCbfVehiclePrice.value) || 200000;
+    const primePct = parseFloat(inputCbfPrimeRate.value) || 12.0;
+    const subprimePct = parseFloat(inputCbfSubprimeRate.value) || 24.25;
+    const n = parseInt(inputCbfMonths.value, 10) || 72;
+
+    const r1 = primePct / 100 / 12;
+    const r2 = subprimePct / 100 / 12;
+
+    const primePmt = P * (r1 / (1 - Math.pow(1 + r1, -n)));
+    const subprimePmt = P * (r2 / (1 - Math.pow(1 + r2, -n)));
+    const monthlyTax = Math.max(0, Math.round(subprimePmt - primePmt));
+    const annualTax = Math.round(monthlyTax * 12);
+    const totalTax = Math.round(monthlyTax * n);
+
+    state.cbfRiskTax = {
+      vehiclePrice: P,
+      primeRate: primePct,
+      subprimeRate: subprimePct,
+      months: n,
+      monthlyTax,
+      annualTax,
+      totalTax
+    };
+
+    if (hudCbfMonthlyTax) hudCbfMonthlyTax.textContent = `R ${formatRand(monthlyTax).replace('R ', '')} /mo`;
+    if (hudCbfAnnualTax) hudCbfAnnualTax.textContent = `R ${formatRand(annualTax).replace('R ', '')}`;
+    if (hudCbfTotalTax) hudCbfTotalTax.textContent = `R ${formatRand(totalTax).replace('R ', '')}`;
+
+    // Re-render blocks to update dynamic tokens in script
+    renderScript();
+  }
+
+  [inputCbfVehiclePrice, inputCbfPrimeRate, inputCbfSubprimeRate, inputCbfMonths].forEach(el => {
+    if (el) el.addEventListener('input', calculateRiskTax);
+  });
+
+  // =========================================================================
+  // CBF PACING TIMER (3-MIN SCREENING / 15-MIN CLOSER)
+  // =========================================================================
+  const cbfTimerDisplay = document.getElementById('cbf-timer-display');
+  const cbfTimerPhaseLabel = document.getElementById('cbf-timer-phase-label');
+  const btnCbfTimerToggle = document.getElementById('btn-cbf-timer-toggle');
+  const btnCbfTimerReset = document.getElementById('btn-cbf-timer-reset');
+
+  function updateCbfTimerDisplay() {
+    if (!cbfTimerDisplay || !cbfTimerPhaseLabel) return;
+    const remainingMs = Math.max(0, state.cbfTimer.totalDurationMs - state.cbfTimer.elapsedMs);
+    const totalSec = Math.floor(remainingMs / 1000);
+    const mins = Math.floor(totalSec / 60);
+    const secs = totalSec % 60;
+    cbfTimerDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+    if (state.cbfSubmode === 'screening') {
+      if (totalSec > 120) {
+        cbfTimerPhaseLabel.textContent = 'PHASE 1: ATTRIBUTION & SIEVE (0-1m)';
+        cbfTimerPhaseLabel.style.color = '#38BDF8';
+      } else if (totalSec > 60) {
+        cbfTimerPhaseLabel.textContent = 'PHASE 2: BANK VS DEALER CLARITY (1-2m)';
+        cbfTimerPhaseLabel.style.color = '#FDE68A';
+      } else {
+        cbfTimerPhaseLabel.textContent = 'PHASE 3: 60-MIN UPLOAD COMMIT (2-3m)';
+        cbfTimerPhaseLabel.style.color = '#34D399';
+      }
+    } else {
+      // Closer Consultation (15 Mins)
+      if (totalSec > 8 * 60) {
+        cbfTimerPhaseLabel.textContent = 'PHASE 1: CLINICAL DIAGNOSIS (0-7m)';
+        cbfTimerPhaseLabel.style.color = '#38BDF8';
+      } else {
+        cbfTimerPhaseLabel.textContent = 'PHASE 2: PRESCRIPTION & ACTIVATE (7-15m)';
+        cbfTimerPhaseLabel.style.color = '#FDE68A';
+      }
+    }
+
+    const cbfFill = document.getElementById('cbf-timer-fill');
+    if (cbfFill) cbfFill.style.width = Math.min(100, (state.cbfTimer.elapsedMs / state.cbfTimer.totalDurationMs) * 100) + '%';
+    if (btnCbfTimerToggle) {
+      btnCbfTimerToggle.textContent = state.cbfTimer.isRunning ? 'Pause [Space]' : 'Start [Space]';
+    }
+  }
+
+  function startCbfTimer() {
+    if (state.cbfTimer.isRunning) return;
+    state.cbfTimer.isRunning = true;
+    state.cbfTimer.startedAt = Date.now() - state.cbfTimer.elapsedMs;
+    state.cbfTimer.timerId = setInterval(() => {
+      state.cbfTimer.elapsedMs = Date.now() - state.cbfTimer.startedAt;
+      if (state.cbfTimer.elapsedMs >= state.cbfTimer.totalDurationMs) {
+        state.cbfTimer.elapsedMs = state.cbfTimer.totalDurationMs;
+        stopCbfTimer();
+      }
+      updateCbfTimerDisplay();
+    }, 250);
+    updateCbfTimerDisplay();
+  }
+
+  function stopCbfTimer() {
+    state.cbfTimer.isRunning = false;
+    if (state.cbfTimer.timerId) {
+      clearInterval(state.cbfTimer.timerId);
+      state.cbfTimer.timerId = null;
+    }
+    updateCbfTimerDisplay();
+  }
+
+  function toggleCbfTimer() {
+    if (state.cbfTimer.isRunning) {
+      stopCbfTimer();
+    } else {
+      startCbfTimer();
+    }
+  }
+
+  function resetCbfTimer() {
+    stopCbfTimer();
+    state.cbfTimer.elapsedMs = 0;
+    updateCbfTimerDisplay();
+  }
+
+  if (btnCbfTimerToggle) btnCbfTimerToggle.addEventListener('click', toggleCbfTimer);
+  if (btnCbfTimerReset) btnCbfTimerReset.addEventListener('click', resetCbfTimer);
+
+  // =========================================================================
   // PANIC EMERGENCY BLANK OVERLAY (HOTKEY 'B')
   // =========================================================================
   const panicOverlay = document.getElementById('panic-overlay');
@@ -1655,10 +2043,13 @@
         }
 
         const payload = {
-          version: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.version) ? SCRIPT_DATA.version : "4.5",
+          version: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.version) ? SCRIPT_DATA.version : "6.0",
           closer: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.closer) ? SCRIPT_DATA.closer : {},
           coldcall: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.coldcall) ? SCRIPT_DATA.coldcall : {},
           coldcall_followup: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.coldcall_followup) ? SCRIPT_DATA.coldcall_followup : {},
+          cbf_closer: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.cbf_closer) ? SCRIPT_DATA.cbf_closer : {},
+          cbf_screening: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.cbf_screening) ? SCRIPT_DATA.cbf_screening : {},
+          cbf_offramp: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.cbf_offramp) ? SCRIPT_DATA.cbf_offramp : {},
           cbfleads: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.cbfleads) ? SCRIPT_DATA.cbfleads : {},
           precall: (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA.precall) ? SCRIPT_DATA.precall : {},
           tokens: state.math,
@@ -1804,13 +2195,21 @@
       stepBlock(1);
       return;
     }
-    if (e.key === 'k' || e.key === 'K' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    if (((e.key === 'k' || e.key === 'K') && state.mode !== 'cbfleads') || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
       e.preventDefault();
       stepBlock(-1);
       return;
     }
 
-    // NUMBER KEYS: Jump to Phase/Stage
+    // NUMBER KEYS: In CBF Leads: 1 = Screening, 2 = Closer, 3 = Off-Ramp
+    if (state.mode === 'cbfleads' && ['1', '2', '3'].includes(e.key)) {
+      e.preventDefault();
+      if (e.key === '1') setCbfSubmode('screening');
+      else if (e.key === '2') setCbfSubmode('closer');
+      else if (e.key === '3') setCbfSubmode('offramp');
+      return;
+    }
+
     if (['1', '2', '3', '4', '5', '6'].includes(e.key)) {
       e.preventDefault();
       jumpToPhase(parseInt(e.key, 10));
@@ -1842,14 +2241,53 @@
       }
     } else if (state.mode === 'cbfleads') {
       // CBF LEADS HOTKEYS
+      if (e.code === 'Space') {
+        e.preventDefault();
+        toggleCbfTimer();
+        return;
+      }
+
       const key = e.key.toUpperCase();
-      if (key === 'P') { e.preventDefault(); showObjection('obj-cbf-price'); return; }
-      if (key === 'G') { e.preventDefault(); showObjection('obj-cbf-guarantee'); return; }
-      if (key === 'B') { e.preventDefault(); showObjection('obj-cbf-blacklisted'); return; }
-      if (key === 'D') { e.preventDefault(); showObjection('obj-cbf-debtreview'); return; }
-      if (key === 'C') { e.preventDefault(); showObjection('obj-cbf-scam'); return; }
-      if (key === 'T') { e.preventDefault(); showObjection('obj-cbf-timeline'); return; }
       if (key === 'E') { e.preventDefault(); toggleEditMode(); return; }
+
+      // Standby Fail Branch hotkeys: cycles through standby fail branches
+      if (key === 'K') {
+        e.preventDefault();
+        const currentKey = getCurrentSubKey();
+        const failBranches = (typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[currentKey] && SCRIPT_DATA[currentKey].failBranches)
+          ? SCRIPT_DATA[currentKey].failBranches
+          : ((typeof SCRIPT_DATA !== 'undefined' && SCRIPT_DATA[state.mode] && SCRIPT_DATA[state.mode].failBranches) ? SCRIPT_DATA[state.mode].failBranches : []);
+
+        if (failBranches && failBranches.length > 0) {
+          const currentIndex = failBranches.findIndex(fb => fb.id === state.activeObjectionId);
+          if (currentIndex === -1) {
+            showObjection(failBranches[0].id);
+          } else if (currentIndex < failBranches.length - 1) {
+            showObjection(failBranches[currentIndex + 1].id);
+          } else {
+            dismissObjection();
+          }
+        }
+        return;
+      }
+
+      if (state.cbfSubmode === 'screening') {
+        if (key === 'B') { e.preventDefault(); showObjection('obj-scr-statements'); return; }
+        if (key === 'S') { e.preventDefault(); showObjection('obj-scr-scam'); return; }
+        if (key === 'T') { e.preventDefault(); showObjection('obj-scr-busy'); return; }
+        if (key === 'D') { e.preventDefault(); showObjection('obj-scr-dealer'); return; }
+      } else if (state.cbfSubmode === 'offramp') {
+        if (key === 'W') { e.preventDefault(); showObjection('obj-off-why'); return; }
+        if (key === 'D') { e.preventDefault(); showObjection('obj-off-dealer'); return; }
+      } else {
+        // Closer Consultation Hotkeys
+        if (key === 'A') { e.preventDefault(); showObjection('obj-cbf-fee'); return; }
+        if (key === 'G') { e.preventDefault(); showObjection('obj-cbf-guarantee'); return; }
+        if (key === 'D') { e.preventDefault(); showObjection('obj-cbf-dealer'); return; }
+        if (key === 'B') { e.preventDefault(); showObjection('obj-cbf-blacklisted'); return; }
+        if (key === 'S') { e.preventDefault(); showObjection('obj-cbf-scam'); return; }
+        if (key === 'T') { e.preventDefault(); showObjection('obj-cbf-timeline'); return; }
+      }
     } else {
       // CLOSER MEETING HOTKEYS
       if (e.code === 'Space') {
@@ -1895,16 +2333,33 @@
   // Initialize F&I quick notes & email capture
   initFniNotes();
 
-  const savedMode = localStorage.getItem('dealership_cockpit_mode') || 'coldcall';
-  setMode(savedMode);
+  // Check URL query parameters for direct deep-linking (e.g. ?mode=cbfleads&submode=closer)
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramMode = urlParams.get('mode');
+  const paramSubmode = urlParams.get('submode');
 
-  // Always show launch modal on page load as primary operational gateway
-  openModeModal();
+  if (paramMode) {
+    setMode(paramMode);
+    if (paramMode === 'cbfleads' && paramSubmode) {
+      setCbfSubmode(paramSubmode);
+    }
+    closeModeModal();
+  } else {
+    const savedMode = localStorage.getItem('dealership_cockpit_mode') || 'coldcall';
+    setMode(savedMode);
+    // Always show launch modal on page load if no mode param specified
+    openModeModal();
+  }
 
   if (brandBadge) {
     brandBadge.style.cursor = 'pointer';
     brandBadge.title = "Click to switch operational workspace (or press M)";
     brandBadge.addEventListener('click', openModeModal);
+  }
+
+  const btnWorkspaceBack = document.getElementById('btn-workspace-back');
+  if (btnWorkspaceBack) {
+    btnWorkspaceBack.addEventListener('click', openModeModal);
   }
 
 })();

@@ -24,7 +24,7 @@ const SCRIPT_DATA = {
         "section": "1. Introduction (0:00 - 0:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Hey [Name], appreciate you making the time today. I know how busy it gets, floor so I'm going to respect your clock and keep this strictly to 15 minutes.\n\njust need to set the agenda for the meeting : I want to ask a few quick questions about how your finance pipeline is currently running to get a better understanding of your dealership and how your team handles the Rejcted leads. \n\nthen once that is we can just jump to the presentation on how we solved this problem for dealerships around the arear, sounds fair enough? \n",
+        "text": "Hey [Name], appreciate you making the time today. I know how busy it gets, floor so I'm going to respect your clock and keep this strictly to 15 minutes.\n\njust need to set the agenda for the meeting : I want to ask a few quick questions about how your finance pipeline is currently running to get a better understanding of your dealership and how your team handles the Rejcted leads.\u00a0\n\nthen once that is we can just jump to the presentation on how we solved this problem for dealerships around the arear, sounds fair enough?\u00a0\n",
         "cue": "Wait for prospect: 'Fair enough / Sounds good.'",
         "stageNote": "Relaxed, peer-to-peer tonality. Do not rush.",
         "_isCustomEdited": true
@@ -33,10 +33,10 @@ const SCRIPT_DATA = {
         "id": "clarify-why-now",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "\n2. C — Clarify  (0:45 - 1:30)",
+        "section": "\n2. C \u2014 Clarify\u00a0 (0:45 - 1:30)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Awesome. \nIm going to assume you guys are on Auto trader, Cars and social media right.? ",
+        "text": "Awesome.\u00a0\nIm going to assume you guys are on Auto trader, Cars and social media right.?\u00a0",
         "cue": "Listen actively. Note their exact words (e.g. 'Signio declines', 'unpaids', 'high DTI').",
         "stageNote": "Let them talk without interrupting. Note down their exact vocabulary.",
         "_isCustomEdited": true
@@ -45,10 +45,10 @@ const SCRIPT_DATA = {
         "id": "clarify-golden-numbers",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "\n2. C — The 3 Golden Numbers (1:30 - 2:30)",
+        "section": "\n2. C \u2014 The 3 Golden Numbers (1:30 - 2:30)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "right and out of those ads how many applications is the D generating on a monthly baises? \n\n1. Roughly how many finance applications is your floor submitting to the banks every month across all lenders?\n\n2. And of those, what percentage would you say are coming back system-declined or turned down on affordability?\n\n3. Got it. So out of {{monthly_apps}} applications, you've got roughly {{declined_units}} people a month getting turned down. What is your team's standard process for those {{declined_units}} customers right now once that decline pops up on Signio?",
+        "text": "right and out of those ads how many applications is the D generating on a monthly baises?\u00a0\n\n1. Roughly how many finance applications is your floor submitting to the banks every month across all lenders?\n\n2. And of those, what percentage would you say are coming back system-declined or turned down on affordability?\n\n3. Got it. So out of {{monthly_apps}} applications, you've got roughly {{declined_units}} people a month getting turned down. What is your team's standard process for those {{declined_units}} customers right now once that decline pops up on Signio?",
         "cue": "Prospect answers: 'Nothing really, the deal just dies / we move on to the next lead.'",
         "stageNote": "Input their exact numbers in the left HUD calculator immediately.",
         "_isCustomEdited": true
@@ -57,7 +57,7 @@ const SCRIPT_DATA = {
         "id": "clarify-root-cause",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "2. C — Root Cause Diagnostic (2:30 - 3:15)",
+        "section": "2. C \u2014 Root Cause Diagnostic (2:30 - 3:15)",
         "type": "rep",
         "speaker": "Rep",
         "text": "When your leads get rejected by the banks, what is the biggest causation of those rejections you typically see on your desk? Is it accounting errors, debt-to-income, unpaids on their bank statements, or what typically kills the deal?",
@@ -68,10 +68,10 @@ const SCRIPT_DATA = {
         "id": "clarify-crm-graveyard",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "2. C — The CRM Graveyard (3:15 - 4:00)",
+        "section": "2. C \u2014 The CRM Graveyard (3:15 - 4:00)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "So right now, they basically sit in your CRM graveyard, and that marketing spend is 100% written off?\n\nAnd when that decline comes through—is it your desk that has to deliver the bad news to the buyer, or does the sales executive handle it?\n\nI hear that every day. You spend 45 minutes capturing the deal, structuring the file, chasing 3 months of bank statements—only to do unpaid administrative therapy for someone who can't get approved.",
+        "text": "So right now, they basically sit in your CRM graveyard, and that marketing spend is 100% written off?\n\nAnd when that decline comes through\u2014is it your desk that has to deliver the bad news to the buyer, or does the sales executive handle it?\n\nI hear that every day. You spend 45 minutes capturing the deal, structuring the file, chasing 3 months of bank statements\u2014only to do unpaid administrative therapy for someone who can't get approved.",
         "cue": "Prospect expresses frustration with awkward conversations and wasted desk hours.",
         "stageNote": "Validate their frustration. Builds deep alliance with the desk."
       },
@@ -79,10 +79,10 @@ const SCRIPT_DATA = {
         "id": "label-problem-bleed",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "3. L — Label the Problem (4:00 - 4:45)",
+        "section": "3. L \u2014 Label the Problem (4:00 - 4:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "So let me play the board back to you to make sure I have this 100% accurate:\n\nYou're submitting roughly {{monthly_apps}} applications a month.\n{{decline_rate}}% are getting turned down by the banks.\nThat is {{declined_units}} prospective buyers every single month who walked into your showroom, picked a vehicle, signed paperwork, and were ready to buy—who then walked out empty-handed.\n\nEven at a conservative gross profit of {{avg_margin}} per unit between the metal, doc fees, and finance commission...\n\nThis floor is forfeiting roughly {{monthly_bleed}} in gross profit every single month to bank algorithms.\n\nThat is what we call the 50% Fallout Bleed.\n\nHow long has your floor been bleeding that gross?",
+        "text": "So let me play the board back to you to make sure I have this 100% accurate:\n\nYou're submitting roughly {{monthly_apps}} applications a month.\n{{decline_rate}}% are getting turned down by the banks.\nThat is {{declined_units}} prospective buyers every single month who walked into your showroom, picked a vehicle, signed paperwork, and were ready to buy\u2014who then walked out empty-handed.\n\nEven at a conservative gross profit of {{avg_margin}} per unit between the metal, doc fees, and finance commission...\n\nThis floor is forfeiting roughly {{monthly_bleed}} in gross profit every single month to bank algorithms.\n\nThat is what we call the 50% Fallout Bleed.\n\nHow long has your floor been bleeding that gross?",
         "cue": "Pause firmly for 2 seconds. Let the {{monthly_bleed}} figure sit in silence.",
         "stageNote": "Eye contact. Never apologize for their real numbers."
       },
@@ -90,10 +90,10 @@ const SCRIPT_DATA = {
         "id": "overview-past-attempts",
         "phase": 1,
         "phaseName": "PHASE 1: DIAGNOSIS",
-        "section": "4. O — Overview Past Experience (4:45 - 5:45)",
+        "section": "4. O \u2014 Overview Past Experience (4:45 - 5:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "And over that time—has your dealership attempted anything internally or worked with third parties to recover those declined customers, or has the file just stayed dead?\n\n[If they say No]: Why is that?\n\nMakes total sense. But let me ask you: If your floor was able to get even 15 or 20 of those turned-down buyers back as approved deals... roughly how much gross revenue would that represent for this store?\n\nAnd how would banking an extra R300k+ in recovered margin every single month change your business?\n\nSo what is currently stopping you guys from actually making that money back right now?",
+        "text": "And over that time\u2014has your dealership attempted anything internally or worked with third parties to recover those declined customers, or has the file just stayed dead?\n\n[If they say No]: Why is that?\n\nMakes total sense. But let me ask you: If your floor was able to get even 15 or 20 of those turned-down buyers back as approved deals... roughly how much gross revenue would that represent for this store?\n\nAnd how would banking an extra R300k+ in recovered margin every single month change your business?\n\nSo what is currently stopping you guys from actually making that money back right now?",
         "cue": "\n",
         "stageNote": "\n",
         "_isCustomEdited": true
@@ -102,10 +102,10 @@ const SCRIPT_DATA = {
         "id": "vacation-origin-mission",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — Origin & 80% Approval Mission (5:45 - 6:45)",
+        "section": "5. S \u2014 Origin & 80% Approval Mission (5:45 - 6:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "That exact problem is actually why our company exists.\n\nWe originally started as Volve Media—an automotive advertising agency. We spent years generating thousands of leads for dealerships across South Africa. The ads worked, the showrooms were full, but month after month, Dealer Principals kept telling us:\n'Guys, the leads are here, but over half of them are getting declined at the bank.'\n\nThat's when we made a decision: we didn't just want to be another marketing agency dumping raw traffic onto an F&I desk. We decided to solve the credit bottleneck directly so we could become the only agency in the country delivering an 80%+ bank finance approval rate on the buyers we bring in.",
+        "text": "That exact problem is actually why our company exists.\n\nWe originally started as Volve Media\u2014an automotive advertising agency. We spent years generating thousands of leads for dealerships across South Africa. The ads worked, the showrooms were full, but month after month, Dealer Principals kept telling us:\n'Guys, the leads are here, but over half of them are getting declined at the bank.'\n\nThat's when we made a decision: we didn't just want to be another marketing agency dumping raw traffic onto an F&I desk. We decided to solve the credit bottleneck directly so we could become the only agency in the country delivering an 80%+ bank finance approval rate on the buyers we bring in.",
         "cue": "\n",
         "stageNote": "\n",
         "_isCustomEdited": true
@@ -114,10 +114,10 @@ const SCRIPT_DATA = {
         "id": "vacation-core-philosophy",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — Financing is Math & Risk (6:45 - 7:45)",
+        "section": "5. S \u2014 Financing is Math & Risk (6:45 - 7:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "When we first set out to crack this, we honestly thought there was nothing we could do—we assumed bank underwriting was this magic secret that nobody outside the banking halls could ever understand, and that the leads were doomed forever.\n\nBut we realized that's not completely true.\n\nWhat we discovered is that it's actually not a mystery at all:\nVehicle financing is purely a math and risk management problem.\n\nThe banks actually want to approve more cars—they make zero profit when they decline your customer. But they need to ensure they don't lend money to people who show behavioral signs of defaulting. The banks determine that by checking key specific factors that we have narrowed down to an exact science.",
+        "text": "When we first set out to crack this, we honestly thought there was nothing we could do\u2014we assumed bank underwriting was this magic secret that nobody outside the banking halls could ever understand, and that the leads were doomed forever.\n\nBut we realized that's not completely true.\n\nWhat we discovered is that it's actually not a mystery at all:\nVehicle financing is purely a math and risk management problem.\n\nThe banks actually want to approve more cars\u2014they make zero profit when they decline your customer. But they need to ensure they don't lend money to people who show behavioral signs of defaulting. The banks determine that by checking key specific factors that we have narrowed down to an exact science.",
         "cue": "Prospect nods in agreement. They know banks want interest but follow scorecards.",
         "stageNote": "Confident, authoritative tonality. You are speaking as financial engineers."
       },
@@ -125,7 +125,7 @@ const SCRIPT_DATA = {
         "id": "vacation-two-buckets",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — The Two Buckets (7:45 - 8:30)",
+        "section": "5. S \u2014 The Two Buckets (7:45 - 8:30)",
         "type": "rep",
         "speaker": "Rep",
         "text": "Now, to be completely transparent: not every declined buyer can be saved.\n\nThe very first thing our underwriting desk does when a file enters our system is split them into two distinct buckets:\n\nBucket 1: The Truly Unrecoverable. People under active administration, formal debt review (Section 86), active court judgments, or zero verifiable income. There is no legal mechanism to put them in a car right now. We do not touch them, and we will never waste your time pretending we can.\n\nBucket 2: The Recoverable Pipeline. These are real, employed buyers with stable salaries and genuine purchase intent, but who tripped automated bank tripwires.\n\nThis second bucket represents 70% to 80% of your showroom turn-downs. This is the only place we operate.",
@@ -136,10 +136,10 @@ const SCRIPT_DATA = {
         "id": "vacation-three-questions",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — The 3 Questions Every Bank Asks (8:30 - 9:30)",
+        "section": "5. S \u2014 The 3 Questions Every Bank Asks (8:30 - 9:30)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "When a bank looks at your declined customer, they aren't looking at some mysterious code. Their algorithm is really just asking three simple questions:\n\n1. The Debt Question:\n'Does this person owe anyone money right now, and are they actually paying the people they owe on time—or are there unpaid accounts and old arrears hanging over their head?'\n\n2. The Bread Question:\n'After they've paid everyone they owe, do they have enough money left over to pay our vehicle installment every month and still buy bread for their family for the next 30 days?'\n\n3. The Conduct Question:\n'And day-to-day, how does this person actually live with their money? Are debit orders bouncing, are they living inside an overdraft with zero buffer—or do their bank statements show someone who manages cash responsibly?'\n\nIf an applicant fails even one of those three questions, the bank's system kicks them out.\n\nSimply put: what Credit Builder Flow does is get your declined buyers to live their lives for 90 days as if they already own the vehicle. We clean up their accounts, fix their cash buffer, eliminate unpaids, and simply prove to the banks that they can comfortably afford this car.",
+        "text": "When a bank looks at your declined customer, they aren't looking at some mysterious code. Their algorithm is really just asking three simple questions:\n\n1. The Debt Question:\n'Does this person owe anyone money right now, and are they actually paying the people they owe on time\u2014or are there unpaid accounts and old arrears hanging over their head?'\n\n2. The Bread Question:\n'After they've paid everyone they owe, do they have enough money left over to pay our vehicle installment every month and still buy bread for their family for the next 30 days?'\n\n3. The Conduct Question:\n'And day-to-day, how does this person actually live with their money? Are debit orders bouncing, are they living inside an overdraft with zero buffer\u2014or do their bank statements show someone who manages cash responsibly?'\n\nIf an applicant fails even one of those three questions, the bank's system kicks them out.\n\nSimply put: what Credit Builder Flow does is get your declined buyers to live their lives for 90 days as if they already own the vehicle. We clean up their accounts, fix their cash buffer, eliminate unpaids, and simply prove to the banks that they can comfortably afford this car.",
         "cue": "Prospect recognizes that clean 90-day conduct unlocks bank approvals.",
         "stageNote": "Count 1, 2, 3 on your hands. The 'buy bread for 30 days' line lands hard."
       },
@@ -147,10 +147,10 @@ const SCRIPT_DATA = {
         "id": "vacation-three-timelines",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — The 3 Recovery Timelines & Case Studies (Slide 11)",
+        "section": "5. S \u2014 The 3 Recovery Timelines & Case Studies (Slide 11)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Because every customer's financial profile is unique, every single lead you refer to us falls into one of three distinct categories:\n\nCategory 1: Deep Restructuring (6 Months+)\nDealerships typically hate this category because it takes the longest to pay out, but roughly 10% to 20% of your turned-down paper lands here. A great example is Lawrence. His Debt-to-Income ratio was over 80% of his salary. The reason a lead like Lawrence takes 6 months is because when someone has a mountain of bills, all their money goes to debt service. You can't show affordability while someone is drowning in debt payments. First 60 days: we aggressively restructure and pay down debt. Next 90 days: he lives with clean bank conduct to prove surplus cash flow. 60 days to clear debt + 90 days of clean banking = roughly 6 months to turn a dead file into a banked delivery.\n\nCategory 2: The Core (90 Days)\nThis is the meat and potatoes of your turned-down paper—roughly 70% to 80% of all the leads you refer will fall right here. A great example is Busi. He had substantial arrears, but his real bottleneck was banking conduct—unpaids and an overdraft that gave him a near-zero approval probability. Settling debt is only half the battle; banks demand three consecutive months of clean statement conduct. First 30 days: settled arrears and waited for the 30-day bureau cycle. Simultaneously over 90 days: coached him through three months of disciplined banking, living as if he already paid the car installment. On day 90, fresh prime-grade statements were pulled, re-applied on Signio, and funded.\n\nCategory 3: Quick Wins (45 to 60 Days)\nThese are the fastest turnarounds—roughly 10% of leads land here. A great example is Khumbuzile. Earning over R25,000 a month with flawless banking conduct, but declined across all lenders over a three-month overdue MTN account for just R300. His banking habits and affordability were already solid. The only bottleneck was bureau lag: creditors and bureaus only reconcile ledgers once a month on billing cycles. Immediate settlement of the R300 + 30-day reporting cycle. By day 45, his credit record was clear, re-captured on Signio, and approved immediately.\n\nNotice that across all three leads—Lawrence, Busi, and Khumbuzile—we never asked the dealership to wait with them or do any work. You sent the referral link, our desk managed the calendar, and your floor banked the delivery.",
+        "text": "Because every customer's financial profile is unique, every single lead you refer to us falls into one of three distinct categories:\n\nCategory 1: Deep Restructuring (6 Months+)\nDealerships typically hate this category because it takes the longest to pay out, but roughly 10% to 20% of your turned-down paper lands here. A great example is Lawrence. His Debt-to-Income ratio was over 80% of his salary. The reason a lead like Lawrence takes 6 months is because when someone has a mountain of bills, all their money goes to debt service. You can't show affordability while someone is drowning in debt payments. First 60 days: we aggressively restructure and pay down debt. Next 90 days: he lives with clean bank conduct to prove surplus cash flow. 60 days to clear debt + 90 days of clean banking = roughly 6 months to turn a dead file into a banked delivery.\n\nCategory 2: The Core (90 Days)\nThis is the meat and potatoes of your turned-down paper\u2014roughly 70% to 80% of all the leads you refer will fall right here. A great example is Busi. He had substantial arrears, but his real bottleneck was banking conduct\u2014unpaids and an overdraft that gave him a near-zero approval probability. Settling debt is only half the battle; banks demand three consecutive months of clean statement conduct. First 30 days: settled arrears and waited for the 30-day bureau cycle. Simultaneously over 90 days: coached him through three months of disciplined banking, living as if he already paid the car installment. On day 90, fresh prime-grade statements were pulled, re-applied on Signio, and funded.\n\nCategory 3: Quick Wins (45 to 60 Days)\nThese are the fastest turnarounds\u2014roughly 10% of leads land here. A great example is Khumbuzile. Earning over R25,000 a month with flawless banking conduct, but declined across all lenders over a three-month overdue MTN account for just R300. His banking habits and affordability were already solid. The only bottleneck was bureau lag: creditors and bureaus only reconcile ledgers once a month on billing cycles. Immediate settlement of the R300 + 30-day reporting cycle. By day 45, his credit record was clear, re-captured on Signio, and approved immediately.\n\nNotice that across all three leads\u2014Lawrence, Busi, and Khumbuzile\u2014we never asked the dealership to wait with them or do any work. You sent the referral link, our desk managed the calendar, and your floor banked the delivery.",
         "cue": "Prospect absorbs the 3 realistic timelines without false promises.",
         "stageNote": "Deliver Lawrence, Busi, and Khumbuzile with steady 30-second cadence."
       },
@@ -158,10 +158,10 @@ const SCRIPT_DATA = {
         "id": "vacation-zero-lift",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — Zero-Lift Desk Reality (Direct Callback)",
+        "section": "5. S \u2014 Zero-Lift Desk Reality (Direct Callback)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Remember when you told me earlier that right now, when a deal declines, your desk has to deliver the bad news, do unpaid therapy, and the lead just dies in your CRM?\n\nHere is how we change that completely:\n\nInstead of doing any of that, your team now only does one single thing: you just send our referral link to the customer. That's it.\n\nFrom that exact second, our team takes over and handles everything else off-site. You don't counsel them. You don't audit statements. We work with the customer directly to resolve the limiting blockages that caused the decline in the first place.\n\nThe next time your desk touches that file, you simply re-submit the application to the banks on Signio—only now, with a clean, bank-ready profile that gets approved.\n\nSend a link -> take the approval -> deliver the vehicle.",
+        "text": "Remember when you told me earlier that right now, when a deal declines, your desk has to deliver the bad news, do unpaid therapy, and the lead just dies in your CRM?\n\nHere is how we change that completely:\n\nInstead of doing any of that, your team now only does one single thing: you just send our referral link to the customer. That's it.\n\nFrom that exact second, our team takes over and handles everything else off-site. You don't counsel them. You don't audit statements. We work with the customer directly to resolve the limiting blockages that caused the decline in the first place.\n\nThe next time your desk touches that file, you simply re-submit the application to the banks on Signio\u2014only now, with a clean, bank-ready profile that gets approved.\n\nSend a link -> take the approval -> deliver the vehicle.",
         "cue": "Prospect realizes this removes work from their desk rather than adding to it.",
         "stageNote": "Stress the phrase 'one single thing: send the link.' F&Is love zero admin."
       },
@@ -169,10 +169,10 @@ const SCRIPT_DATA = {
         "id": "vacation-exclusivity",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — Lead Exclusivity: Worst-Case Socratic Lock",
+        "section": "5. S \u2014 Lead Exclusivity: Worst-Case Socratic Lock",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Now, the first question every sharp Dealer Principal and F&I asks is:\n'What stops you from taking my rehabilitated buyer and selling them to the dealership down the road?'\n\nLet's actually play that worst-case scenario out together:\n\nAssuming we did that scummy thing—we took your declined buyer, cleaned them up, and shopped them to your competitor down the road. And you inevitably found out. What would be your immediate next move?\n\n[Wait for Dealer/F&I to answer: 'I'd stop working with you immediately, cancel the agreement, and kick you out.']\n\nExactly. And in the South African dealership community—because everyone knows each other and DPs talk—what happens next when you tell your network and your friends in the industry what we did?\n\n[Wait for Dealer/F&I: 'Nobody would work with you. You'd be blacklisted.']\n\n100%. So how long do you think our business would survive in this market playing that game?\n\n[Dealer/F&I: 'Not very long. You'd be out of business in a few months.']\n\nSpot on. It's commercial suicide. Now contrast that with the real math: If we honor complete exclusivity, keep every lead locked to your showroom, and rehabilitate 20, 30, 50 of your turned-down buyers every year at R6,000 to R10,000 a deal... how much more money do we make together over the next 3 to 5 years?\n\n[Dealer/F&I: 'Hundreds of thousands. Way more than flipping a single deal.']\n\nExactly. Morals aside, the pure economics guarantee that we only win when that car drives off YOUR showroom floor. That is why our exclusivity is legally hardcoded into our bilateral pilot agreement.",
+        "text": "Now, the first question every sharp Dealer Principal and F&I asks is:\n'What stops you from taking my rehabilitated buyer and selling them to the dealership down the road?'\n\nLet's actually play that worst-case scenario out together:\n\nAssuming we did that scummy thing\u2014we took your declined buyer, cleaned them up, and shopped them to your competitor down the road. And you inevitably found out. What would be your immediate next move?\n\n[Wait for Dealer/F&I to answer: 'I'd stop working with you immediately, cancel the agreement, and kick you out.']\n\nExactly. And in the South African dealership community\u2014because everyone knows each other and DPs talk\u2014what happens next when you tell your network and your friends in the industry what we did?\n\n[Wait for Dealer/F&I: 'Nobody would work with you. You'd be blacklisted.']\n\n100%. So how long do you think our business would survive in this market playing that game?\n\n[Dealer/F&I: 'Not very long. You'd be out of business in a few months.']\n\nSpot on. It's commercial suicide. Now contrast that with the real math: If we honor complete exclusivity, keep every lead locked to your showroom, and rehabilitate 20, 30, 50 of your turned-down buyers every year at R6,000 to R10,000 a deal... how much more money do we make together over the next 3 to 5 years?\n\n[Dealer/F&I: 'Hundreds of thousands. Way more than flipping a single deal.']\n\nExactly. Morals aside, the pure economics guarantee that we only win when that car drives off YOUR showroom floor. That is why our exclusivity is legally hardcoded into our bilateral pilot agreement.",
         "cue": "Dealer/F&I explicitly states that stealing leads is commercial suicide.",
         "stageNote": "Let them answer each question. Do not skip the Socratic responses."
       },
@@ -180,10 +180,10 @@ const SCRIPT_DATA = {
         "id": "vacation-commercials",
         "phase": 2,
         "phaseName": "PHASE 2: SELLING THE VACATION",
-        "section": "5. S — Performance Commercials & Destination Math",
+        "section": "5. S \u2014 Performance Commercials & Destination Math",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Here is how our commercial partnership is structured:\n\n• Vehicles under R130,000: Flat handling fee of R6,000 upon successful delivery.\n• Vehicles R130,000 and above: 5.0% of the vehicle retail price upon successful delivery.\n\n• R0 Upfront cost.\n• R0 Monthly retainers.\n• R0 Platform or tech fees.\n\nOur fee is payable ONLY once the vehicle is delivered and funded by the bank. If that customer does not take delivery of a car from your floor, you owe us absolutely nothing.\n\nAnd destination math: Right now, you've got roughly {{declined_units}} turned-down files in your CRM graveyard generating exactly R0. Even if our desk only recovers {{recovered_units}} of those buyers a month, that is roughly {{recovered_revenue}} in net new gross profit and F&I commission that was otherwise dead money.\n\nYou are essentially unlocking found money at zero capital risk.",
+        "text": "Here is how our commercial partnership is structured:\n\n\u2022 Vehicles under R130,000: Flat handling fee of R6,000 upon successful delivery.\n\u2022 Vehicles R130,000 and above: 5.0% of the vehicle retail price upon successful delivery.\n\n\u2022 R0 Upfront cost.\n\u2022 R0 Monthly retainers.\n\u2022 R0 Platform or tech fees.\n\nOur fee is payable ONLY once the vehicle is delivered and funded by the bank. If that customer does not take delivery of a car from your floor, you owe us absolutely nothing.\n\nAnd destination math: Right now, you've got roughly {{declined_units}} turned-down files in your CRM graveyard generating exactly R0. Even if our desk only recovers {{recovered_units}} of those buyers a month, that is roughly {{recovered_revenue}} in net new gross profit and F&I commission that was otherwise dead money.\n\nYou are essentially unlocking found money at zero capital risk.",
         "cue": "Prospect realizes they have zero capital exposure and high upside.",
         "stageNote": "Rhythmically hit the R0 lines. Transition to the close."
       },
@@ -191,10 +191,10 @@ const SCRIPT_DATA = {
         "id": "close-authority-check",
         "phase": 3,
         "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-        "section": "6. E — Authority Litmus Check (10:00 - 10:45)",
+        "section": "6. E \u2014 Authority Litmus Check (10:00 - 10:45)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Now, [Name], when it comes to plugging in an off-site recovery desk to rescue these declined files—is that a workflow you have the authority to green-light yourself on your desk, or does every service agreement go strictly through the Dealer Principal?",
+        "text": "Now, [Name], when it comes to plugging in an off-site recovery desk to rescue these declined files\u2014is that a workflow you have the authority to green-light yourself on your desk, or does every service agreement go strictly through the Dealer Principal?",
         "cue": "Branch:\nIf DP -> Proceed directly to the Layup & 3 Decisions.\nIf F&I -> 'Makes complete sense. If this were entirely your decision and [DP] had already approved the budget, would you personally want this on your desk this month?'",
         "stageNote": "Now that they love the vacation, authority qualification has zero friction."
       },
@@ -202,10 +202,10 @@ const SCRIPT_DATA = {
         "id": "close-dp-layup",
         "phase": 3,
         "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-        "section": "6. E — The Dealer Principal Layup (10:45 - 12:00)",
+        "section": "6. E \u2014 The Dealer Principal Layup (10:45 - 12:00)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "[DP Name], I hear you 100%.\n\nWhenever a dealer principal tells me they need time to weigh this up, I always have this visual of them sitting alone in their office tonight with a cup of coffee, staring at the ceiling for two hours weighing this up.\n\nBut you and I both know that's not what happens.\n\nWhat actually happens is: you walk out of this room, someone corners you about a trade-in appraisal, a customer has a complaint on delivery, you've got floorplan interest to review, and you spend the rest of the day putting out fires.\n\nNext week, your F&I hands you the weekly pack. You see another 10 to 15 bank turn-downs on the sheet. The cycle repeats, and two months from now, life made the decision for you by default—and the store is in the exact same spot, bleeding {{monthly_bleed}} every month.\n\nInstead of letting the calendar make that call for you, let's look at the only three decisions that are actually on the table today:",
+        "text": "[DP Name], I hear you 100%.\n\nWhenever a dealer principal tells me they need time to weigh this up, I always have this visual of them sitting alone in their office tonight with a cup of coffee, staring at the ceiling for two hours weighing this up.\n\nBut you and I both know that's not what happens.\n\nWhat actually happens is: you walk out of this room, someone corners you about a trade-in appraisal, a customer has a complaint on delivery, you've got floorplan interest to review, and you spend the rest of the day putting out fires.\n\nNext week, your F&I hands you the weekly pack. You see another 10 to 15 bank turn-downs on the sheet. The cycle repeats, and two months from now, life made the decision for you by default\u2014and the store is in the exact same spot, bleeding {{monthly_bleed}} every month.\n\nInstead of letting the calendar make that call for you, let's look at the only three decisions that are actually on the table today:",
         "cue": "Pause 1s after 'staring at the ceiling'. Watch for their smile or nod.",
         "stageNote": "Warm, conversational, slightly amused tonality. Never confrontational."
       },
@@ -213,10 +213,10 @@ const SCRIPT_DATA = {
         "id": "close-three-decisions",
         "phase": 3,
         "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-        "section": "6. E — The 3 Decisions Anchor (12:00 - 13:30)",
+        "section": "6. E \u2014 The 3 Decisions Anchor (12:00 - 13:30)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Decision 1: You choose not to work with us.\nNothing changes. Your desk continues to let turned-down buyers walk, and this store continues to forfeit roughly {{monthly_bleed}} in retail gross every month to bank algorithms.\n\nDecision 2: You test us, and we fall flat on our face.\nWe take your declined files from last week, we don't recover a single vehicle, and we fail. Because we take zero upfront fees and our portal handles the heavy lifting, your desk lost zero selling hours, your banks were untouched, and you paid zero retainers. You are in the exact same spot you're in right now.\n\nDecision 3: It works exactly like we showed you.\nWe take the {{declined_units}} buyers your banks turned down, our underwriters remediate the bureau blockers, and we put just {{recovered_units}} extra banked deals over your curb this month. That's {{recovered_revenue}} in retained gross profit that was already written off as dead money.\n\nBetween Decision 1 and Decision 2, your downside is identical—you lose nothing. But Decision 3 puts {{recovered_units}} extra units on your board every month.\n\nIf a decision carries zero downside, why not make the call that actually has the upside for your floor?",
+        "text": "Decision 1: You choose not to work with us.\nNothing changes. Your desk continues to let turned-down buyers walk, and this store continues to forfeit roughly {{monthly_bleed}} in retail gross every month to bank algorithms.\n\nDecision 2: You test us, and we fall flat on our face.\nWe take your declined files from last week, we don't recover a single vehicle, and we fail. Because we take zero upfront fees and our portal handles the heavy lifting, your desk lost zero selling hours, your banks were untouched, and you paid zero retainers. You are in the exact same spot you're in right now.\n\nDecision 3: It works exactly like we showed you.\nWe take the {{declined_units}} buyers your banks turned down, our underwriters remediate the bureau blockers, and we put just {{recovered_units}} extra banked deals over your curb this month. That's {{recovered_revenue}} in retained gross profit that was already written off as dead money.\n\nBetween Decision 1 and Decision 2, your downside is identical\u2014you lose nothing. But Decision 3 puts {{recovered_units}} extra units on your board every month.\n\nIf a decision carries zero downside, why not make the call that actually has the upside for your floor?",
         "cue": "Deliver seamlessly without asking permission between decisions.",
         "stageNote": "Let the logic sink in. Hold eye contact."
       },
@@ -224,10 +224,10 @@ const SCRIPT_DATA = {
         "id": "close-sandbox-pilot-lock",
         "phase": 3,
         "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-        "section": "7. R — The 30-Day Sandbox Pilot Lock (13:30 - 15:00)",
+        "section": "7. R \u2014 The 30-Day Sandbox Pilot Lock (13:30 - 15:00)",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Look [Name], we don't need a complex multi-year contract or a massive operational rollout to prove this works.\n\nHere is what I propose: Let's do a 30-Day Sandbox Pilot. Send our desk 5 to 10 of last week's dead, declined files—customers who walked off your lot and who you've already written off as lost revenue.\n\nWe will onboard them, separate the unrecoverable files, and put the recoverable buyers onto their rehabilitation track. If we don't produce clean, pre-approved buyers ready to take delivery from your floor, you walk away having spent zero Rand.\n\nCan we grab 5 of last week's declined files off Signio today so we can get started?",
+        "text": "Look [Name], we don't need a complex multi-year contract or a massive operational rollout to prove this works.\n\nHere is what I propose: Let's do a 30-Day Sandbox Pilot. Send our desk 5 to 10 of last week's dead, declined files\u2014customers who walked off your lot and who you've already written off as lost revenue.\n\nWe will onboard them, separate the unrecoverable files, and put the recoverable buyers onto their rehabilitation track. If we don't produce clean, pre-approved buyers ready to take delivery from your floor, you walk away having spent zero Rand.\n\nCan we grab 5 of last week's declined files off Signio today so we can get started?",
         "cue": "Prospect agrees to pull 5 files to test.",
         "stageNote": "Lock the operational next step. Keep friction at absolute zero."
       }
@@ -263,7 +263,7 @@ const SCRIPT_DATA = {
         "triggerKey": "T",
         "regexPattern": "\\b(90 days is too long|three months is too long|take too long|customer will walk)\\b",
         "bulletSummary": "Signio-Wide Decline Lock",
-        "repScript": "That would be true if the customer was financeable today. But remember: they were turned down on Signio across all 4 major banks. They cannot buy from your competitor today either. When their credit is fixed legally by our desk, they buy from the dealership that helped them—which is you."
+        "repScript": "That would be true if the customer was financeable today. But remember: they were turned down on Signio across all 4 major banks. They cannot buy from your competitor today either. When their credit is fixed legally by our desk, they buy from the dealership that helped them\u2014which is you."
       },
       {
         "id": "obj-data-buyer",
@@ -296,7 +296,7 @@ const SCRIPT_DATA = {
         "section": "\n\n",
         "type": "rep",
         "speaker": "Rep",
-        "text": " Good Morning, [Name] ↘\n\nyou speaking to Thompson , with Credit Builder Flow ↘\n\nHow are you? ↘",
+        "text": "\u00a0Good Morning, [Name] \u2198\n\nyou speaking to Thompson , with Credit Builder Flow \u2198\n\nHow are you? \u2198",
         "cue": "[TOTAL SILENCE] Do NOT pitch yet. Wait for prospect: 'Good thanks / Fine, and you?'",
         "stageNote": "3-Beat Cadence. 0.5s pause between lines. Downward pitch on 'you'. Never roll words together.",
         "_isCustomEdited": true
@@ -308,8 +308,8 @@ const SCRIPT_DATA = {
         "section": "",
         "type": "rep",
         "speaker": "Rep",
-        "text": "I'm good, thank you.\n\nThe reason for my call is we're currently working with the F&I departments in dealerships to help recover the vehicle sales they lose to bank declines.\n\nRight now, when a finance application gets turned down, that customer usually walks out and the deal dies.\n\nWhat we do is take those dead turn-downs, fix what caused them to get rejected by the banks, and send that buyer right back to you, the F&I, so you can deliver the car—without any additional work for your team.",
-        "cue": "Prospect listens actively. Do not pause—seamlessly deliver the Ask in the same breath.",
+        "text": "I'm good, thank you.\n\nThe reason for my call is we're currently working with the F&I departments in dealerships to help recover the vehicle sales they lose to bank declines.\n\nRight now, when a finance application gets turned down, that customer usually walks out and the deal dies.\n\nWhat we do is take those dead turn-downs, fix what caused them to get rejected by the banks, and send that buyer right back to you, the F&I, so you can deliver the car\u2014without any additional work for your team.",
+        "cue": "Prospect listens actively. Do not pause\u2014seamlessly deliver the Ask in the same breath.",
         "stageNote": "Dealer native dialect: 'recover vehicle sales', 'dead turn-downs', 'right back to you, the F&I'. Zero threat to their commission.",
         "_isCustomEdited": true
       },
@@ -320,7 +320,7 @@ const SCRIPT_DATA = {
         "section": "",
         "type": "rep",
         "speaker": "Rep",
-        "text": "And I know I called you out of the blue—so instead of me trying to explain the whole process over the phone while you're busy, I have a short 10-minute presentation ready to show you exactly how we can be of service to your dealership.\n\nAll I need from you is the time.\n\nWould Thursday morning or Friday work better for you?",
+        "text": "And I know I called you out of the blue\u2014so instead of me trying to explain the whole process over the phone while you're busy, I have a short 10-minute presentation ready to show you exactly how we can be of service to your dealership.\n\nAll I need from you is the time.\n\nWould Thursday morning or Friday work better for you?",
         "cue": "Assumptive day/time choice. Listen for day preference or objection.",
         "stageNote": "Preempts 'how do you do that?' by explicitly offering the 10-minute presentation. Binary day close.",
         "_isCustomEdited": true
@@ -332,7 +332,7 @@ const SCRIPT_DATA = {
         "section": "",
         "type": "rep",
         "speaker": "Rep",
-        "text": "100%, that’s locked in for [Day] at [Time].\n\nWhat’s your best direct email address so I can get your calendar invite through?\n\n(Prospect provides email)\n\nAwesome—let me just spell that back to make sure I don't miss a character: [spell email back], correct?\n\n(Prospect confirms)\n\nPerfect. And what is your direct cell or WhatsApp number?\n\nThe reason I ask is that dealership email firewalls often filter external calendar links into spam, and the last thing we want is technical delays eating into your floor time when you have deliveries to handle. We just ping the 1-click meeting link to your WhatsApp 5 minutes before so you can jump straight on without hassle.\n\n(Prospect provides cell/WhatsApp)\n\nSpot on. I’m handing your file over to Kea, our Partnership Manager. He’s going to send the invite and a 2-minute overview directly to your inbox right now.\n\nPlease just hit 'Accept' on the invite when it pops up so your slot is reserved on Kea's calendar.\n\nThanks for your time, [Name], Kea will be in touch shortly. Have a productive day on the floor!",
+        "text": "100%, that\u2019s locked in for [Day] at [Time].\n\nWhat\u2019s your best direct email address so I can get your calendar invite through?\n\n(Prospect provides email)\n\nAwesome\u2014let me just spell that back to make sure I don't miss a character: [spell email back], correct?\n\n(Prospect confirms)\n\nPerfect. And what is your direct cell or WhatsApp number?\n\nThe reason I ask is that dealership email firewalls often filter external calendar links into spam, and the last thing we want is technical delays eating into your floor time when you have deliveries to handle. We just ping the 1-click meeting link to your WhatsApp 5 minutes before so you can jump straight on without hassle.\n\n(Prospect provides cell/WhatsApp)\n\nSpot on. I\u2019m handing your file over to Kea, our Partnership Manager. He\u2019s going to send the invite and a 2-minute overview directly to your inbox right now.\n\nPlease just hit 'Accept' on the invite when it pops up so your slot is reserved on Kea's calendar.\n\nThanks for your time, [Name], Kea will be in touch shortly. Have a productive day on the floor!",
         "cue": "Collect and spell-check email. Justify WhatsApp with corporate firewall & floor time protection. Request 'Accept' on calendar.",
         "stageNote": "Email first -> Spell back -> WhatsApp firewall justification -> Kea invite + Accept click.",
         "_isCustomEdited": true
@@ -345,7 +345,7 @@ const SCRIPT_DATA = {
         "triggerKey": "S",
         "regexPattern": "\\b(regarding what|in connection with|what is (this|it) about|why are you calling)\\b",
         "bulletSummary": "Declined Finance Resubmission Extension Check",
-        "repScript": "It's regarding the recovery protocol for bank-declined leads.\n\nIs that still handled by the lead F&i? "
+        "repScript": "It's regarding the recovery protocol for bank-declined leads.\n\nIs that still handled by the lead F&i?\u00a0"
       },
       {
         "id": "obj-cc-email",
@@ -353,7 +353,7 @@ const SCRIPT_DATA = {
         "triggerKey": "E",
         "regexPattern": "\\b(send (me )?(an )?email|email me|send (me )?(a )?brochure|send (it )?on email|mail me)\\b",
         "bulletSummary": "Kea Partnership Manager Hand-Off -> Case Study & Provisional Slot Anchor",
-        "repScript": "100%, I’ll have that sent through right now with a case study showing the recovery numbers as well.\n\nI’ll have Kea, our Partnership Manager, send it directly to your inbox and put down [Thursday morning] as a provisional slot. Once you’ve had a quick look, you can just hit reply to Kea and let him know if that time suits you or if another slot works better.\n\nDoes that work for you as well?\n\n(Prospect agrees: 'Yes, that's fine')\n\nAwesome. What’s the best direct email address for Kea to send that to?\n\n(Prospect provides email)\n\nGot it. And is this line your direct cell just in case the brief drops into your spam folder?\n\nPerfect. Kea will pop that through to you shortly. Have a great day!"
+        "repScript": "100%, I\u2019ll have that sent through right now with a case study showing the recovery numbers as well.\n\nI\u2019ll have Kea, our Partnership Manager, send it directly to your inbox and put down [Thursday morning] as a provisional slot. Once you\u2019ve had a quick look, you can just hit reply to Kea and let him know if that time suits you or if another slot works better.\n\nDoes that work for you as well?\n\n(Prospect agrees: 'Yes, that's fine')\n\nAwesome. What\u2019s the best direct email address for Kea to send that to?\n\n(Prospect provides email)\n\nGot it. And is this line your direct cell just in case the brief drops into your spam folder?\n\nPerfect. Kea will pop that through to you shortly. Have a great day!"
       },
       {
         "id": "obj-cc-virtual",
@@ -361,7 +361,7 @@ const SCRIPT_DATA = {
         "triggerKey": "V",
         "regexPattern": "\\b(are you coming|come (to |in )?person|visit (us|the dealership)|where are you based|are you in)\\b",
         "bulletSummary": "Saves Time & Energy -> Protects Showroom Walk-Ins",
-        "repScript": "No, not at all—we do a quick online meeting.\n\n\n  that way,It saves both of us time and energy—and that way, if a client walks into your office you able to attend to them as effectly as possible,\n\n\n Does Thursday around 10:30 work?"
+        "repScript": "No, not at all\u2014we do a quick online meeting.\n\n\n\u00a0 that way,It saves both of us time and energy\u2014and that way, if a client walks into your office you able to attend to them as effectly as possible,\n\n\n\u00a0Does Thursday around 10:30 work?"
       },
       {
         "id": "obj-cc-nodeclines",
@@ -369,15 +369,15 @@ const SCRIPT_DATA = {
         "triggerKey": "X",
         "regexPattern": "\\b(we (don't|do not) (get|have) declines|we are fine|not an issue|our approvals are (fine|good)|all (our )?deals approve)\\b",
         "bulletSummary": "5-Second High-Status Disqualification",
-        "repScript": "Prospect: \"We don't do in-house finance, we use a private F&I company.\"\n\n\n\n\nYou:\n\n\"100%, that makes complete sense—and that’s actually why dealerships in your position work with us.\n\n\n\n\nWhen your private F&I gets a bank decline, they have to drop that file and move on to the next easy deal. They don't have the process to rehabilitate that buyer—which means your dealership loses the vehicle sale.\n\n\n\n\nWe don't replace your external F&I at all. We take those dead declines off their desk, fix what blocked them, and send the approved buyer right back to your private F&I so you can deliver the car.\n\n\n\n\nAre you open to seeing how we plug into your external F&I for 15 minutes this Thursday?\""
+        "repScript": "Prospect: \"We don't do in-house finance, we use a private F&I company.\"\n\n\n\n\nYou:\n\n\"100%, that makes complete sense\u2014and that\u2019s actually why dealerships in your position work with us.\n\n\n\n\nWhen your private F&I gets a bank decline, they have to drop that file and move on to the next easy deal. They don't have the process to rehabilitate that buyer\u2014which means your dealership loses the vehicle sale.\n\n\n\n\nWe don't replace your external F&I at all. We take those dead declines off their desk, fix what blocked them, and send the approved buyer right back to your private F&I so you can deliver the car.\n\n\n\n\nAre you open to seeing how we plug into your external F&I for 15 minutes this Thursday?\""
       },
       {
         "id": "obj-cc-how",
-        "title": " HOW ? ",
+        "title": "\u00a0HOW ?\u00a0",
         "triggerKey": "H",
         "regexPattern": "\\b(how (do|would) you (do that|do it|work)|how does (it|that) work|what (do|would) you (actually )?do)\\b",
         "bulletSummary": "\n",
-        "repScript": "\"Good question—it’s pretty straightforward.\n\nWhat we do first is identify exactly what caused the finance decline, and help the buyer settle or resolve that blocker. Once that's cleared, we make sure the deal actually passes affordability on paper.\n\nFrom there, we send them straight back to your floor so you can run the application.\n\nThis entire process is handled off-site without pulling your dealership into the legwork—saving your team time and resources while keeping your store completely protected.\n\nThe meeting I’m looking to book is just to show you how this works in more depth. Does Thursday or Friday work for you?\""
+        "repScript": "\"Good question\u2014it\u2019s pretty straightforward.\n\nWhat we do first is identify exactly what caused the finance decline, and help the buyer settle or resolve that blocker. Once that's cleared, we make sure the deal actually passes affordability on paper.\n\nFrom there, we send them straight back to your floor so you can run the application.\n\nThis entire process is handled off-site without pulling your dealership into the legwork\u2014saving your team time and resources while keeping your store completely protected.\n\nThe meeting I\u2019m looking to book is just to show you how this works in more depth. Does Thursday or Friday work for you?\""
       },
       {
         "id": "obj-cc-privatefni",
@@ -385,13 +385,13 @@ const SCRIPT_DATA = {
         "triggerKey": "F",
         "regexPattern": "\\b(private f(&|and)?i|external f(&|and)?i|outsource(d)? f(&|and)?i|third(-|\\s)?party f(&|and)?i|don('?t| do not) (do|have) in-house|no in-house finance|outside f(&|and)?i)\\b",
         "bulletSummary": "Don't Replace External F&I -> Rehabilitate Dead Declines -> Return Approved Buyer",
-        "repScript": "100%, that makes complete sense—and that’s actually why dealerships in your position work with us.\n\nWhen your private F&I gets a bank decline, they have to drop that file and move on to the next easy deal. They don't have the process to rehabilitate that buyer—which means your dealership loses the vehicle sale.\n\nWe don't replace your external F&I at all. We take those dead declines off their desk, fix what blocked them, and send the approved buyer right back to your private F&I so you can deliver the car.\n\nAre you open to seeing how we plug into your external F&I for 15 minutes this Thursday?"
+        "repScript": "100%, that makes complete sense\u2014and that\u2019s actually why dealerships in your position work with us.\n\nWhen your private F&I gets a bank decline, they have to drop that file and move on to the next easy deal. They don't have the process to rehabilitate that buyer\u2014which means your dealership loses the vehicle sale.\n\nWe don't replace your external F&I at all. We take those dead declines off their desk, fix what blocked them, and send the approved buyer right back to your private F&I so you can deliver the car.\n\nAre you open to seeing how we plug into your external F&I for 15 minutes this Thursday?"
       },
       {
         "id": "obj-coldcall-1791879494893",
         "triggerKey": "?",
         "label": "New Card",
-        "title": "NO THANK YOU. ",
+        "title": "NO THANK YOU.\u00a0",
         "bulletSummary": "Summary of how to counter this objection...",
         "repScript": "its rare i hear hear someone not interested in increasing the revenue for the dealership,&nbsp;\n\nCan i ask why Kendall.&nbsp; tone is important here.&nbsp;"
       },
@@ -401,7 +401,7 @@ const SCRIPT_DATA = {
         "triggerKey": "G",
         "regexPattern": "\\b(group policy|approved vendor|morgan group|motus|bidvest|head office|procurement|only approved)\\b",
         "bulletSummary": "5-Second Procurement Exit",
-        "repScript": "Understood, [Name]. If head office locks down your vendor book, I won't waste your time. Appreciate the directness, have a great day. [Disconnect -> Next Dial]\n\nask questions so you can equip yourslef for the next person in the future. "
+        "repScript": "Understood, [Name]. If head office locks down your vendor book, I won't waste your time. Appreciate the directness, have a great day. [Disconnect -> Next Dial]\n\nask questions so you can equip yourslef for the next person in the future.\u00a0"
       },
       {
         "id": "obj-cc-transunion",
@@ -409,7 +409,7 @@ const SCRIPT_DATA = {
         "triggerKey": "T",
         "regexPattern": "\\b(transunion|sort (it )?out themselves|client('s)? problem|we don't intervene|credit bureau themselves)\\b",
         "bulletSummary": "Walked Gross vs TU Score -> Tier-1 Return in 60 Days",
-        "repScript": "100%—and no F&I should be acting as a debt counselor. But when a buyer walks out to \"sort out TransUnion,\" 9 times out of 10 they vanish or go Rent-to-Own, which costs you the entire sale.\n\n\nWe have a process that actually gets them back to your showroom after they fix the specific blocker, so I'm looking to book a meeting to show you exactly how we do that.\n\n\n\n\nDoes Thursday or Friday work for you?"
+        "repScript": "100%\u2014and no F&I should be acting as a debt counselor. But when a buyer walks out to \"sort out TransUnion,\" 9 times out of 10 they vanish or go Rent-to-Own, which costs you the entire sale.\n\n\nWe have a process that actually gets them back to your showroom after they fix the specific blocker, so I'm looking to book a meeting to show you exactly how we do that.\n\n\n\n\nDoes Thursday or Friday work for you?"
       },
       {
         "id": "obj-cc-popia",
@@ -417,7 +417,7 @@ const SCRIPT_DATA = {
         "triggerKey": "P",
         "regexPattern": "\\b(popia|popi act|privacy|rogue|scam|burnt our fingers|personal information|data protection|third party)\\b",
         "bulletSummary": "Customer Consent & F&I Rejection Form Shield",
-        "repScript": "I'm happy you care about your customers—we actually don't contact leads without their consent. The way we get a hold of them in the first place is through a form they fill out on their own, which your F&I sends after informing them they got rejected for financing. That completely protects the dealership and ensures you don't share any personal data. That's actually one of the parts we were going to walk through in our meeting—what time did you prefer?"
+        "repScript": "I'm happy you care about your customers\u2014we actually don't contact leads without their consent. The way we get a hold of them in the first place is through a form they fill out on their own, which your F&I sends after informing them they got rejected for financing. That completely protects the dealership and ensures you don't share any personal data. That's actually one of the parts we were going to walk through in our meeting\u2014what time did you prefer?"
       }
     ]
   },
@@ -430,7 +430,7 @@ const SCRIPT_DATA = {
         "section": "Ghost Recovery Touchpoint",
         "type": "rep",
         "speaker": "Rep",
-        "text": "Hey [Name], Kea here from Credit Builder Flow, how are you?\n\nGlad to hear it, thanks. Look, we had a meeting scheduled for last week, and I’m assuming a client walked onto the showroom floor right as we were supposed to jump on, so you couldn't make it?",
+        "text": "Hey [Name], Kea here from Credit Builder Flow, how are you?\n\nGlad to hear it, thanks. Look, we had a meeting scheduled for last week, and I\u2019m assuming a client walked onto the showroom floor right as we were supposed to jump on, so you couldn't make it?",
         "cue": "Assume life and showroom fires got in the way. Zero guilt or blame. Listen for tone.",
         "stageNote": "Calm, friendly, non-needy tonality. Never sound offended or accusatory.",
         "_isCustomEdited": true
@@ -442,8 +442,8 @@ const SCRIPT_DATA = {
         "section": "Funnel Position & Reality Check",
         "type": "rep",
         "speaker": "Rep",
-        "text": "I completely understand—customers always come first. Look, the only reason I’m reaching out to you today is because we can only onboard a limited number of dealerships per quarter. Because we already had that meeting booked in, I didn't want to just release your spot to another dealership without speaking to you first.\nSo I just need to know right now: is recovering lost revenue for the dealership still a priority for the dealership right now?",
-        "cue": "\"Glad to hear it, thanks.\n\n\n Look, we spoke last week and you asked me to send over that breakdown on how we recover your declined finance applications. Since I didn't hear back, I’m assuming your dealership’s firewall probably ate the email or threw it into your spam folder?\"",
+        "text": "I completely understand\u2014customers always come first. Look, the only reason I\u2019m reaching out to you today is because we can only onboard a limited number of dealerships per quarter. Because we already had that meeting booked in, I didn't want to just release your spot to another dealership without speaking to you first.\nSo I just need to know right now: is recovering lost revenue for the dealership still a priority for the dealership right now?",
+        "cue": "\"Glad to hear it, thanks.\n\n\n\u00a0Look, we spoke last week and you asked me to send over that breakdown on how we recover your declined finance applications. Since I didn't hear back, I\u2019m assuming your dealership\u2019s firewall probably ate the email or threw it into your spam folder?\"",
         "stageNote": "Give them an explicit way out. If they want to say no, let them say no cleanly.",
         "_isCustomEdited": true
       },
@@ -454,8 +454,8 @@ const SCRIPT_DATA = {
         "section": "Next Course of Action",
         "type": "dialogue",
         "speaker": "3-Way Action Fork",
-        "text": "Okay, great. Since I'm holding this spot open for you, let’s get it moved to tomorrow, Thursday. Does [Time A, e.g., 10:00 AM] or [Time B, e.g., 2:00 PM] work better on your side?\"<i data-path-to-node=\"11,1,0\" data-index-in-node=\"0\">(They pick a time)</i><i data-path-to-node=\"11,1,0\" data-index-in-node=\"0\">\n</i><b data-path-to-node=\"11,2,0\" data-index-in-node=\"0\">You:</b> \"Perfect. Look, to make sure our system officially reserves your spot and doesn't release it, I’m sending the updated meeting link to your email right now while we're on the line. Can you quickly open that up and click <b data-path-to-node=\"11,2,0\" data-index-in-node=\"224\">'Accept'</b> for me so I know for a fact your spot is locked in?",
-        "cue": "Yeah, dealership spam filters are notorious for blocking external files.\n\n\n\n\n Look, instead of us going back and forth with emails getting lost in spam, this is why we have meetings \n\n it’s honestly going to be much faster for both of us to just jump on a quick 10-minute screen-share tomorrow.\n\nI can show you the exact workflow right in front of you, and you can decide right there on the call whether it’s worth it for your floor or not. \n\n\n\n\nDo you have a quick 10 minutes tomorrow, Thursday, at 10:00 AM or 2:00 PM",
+        "text": "Okay, great. Since I'm holding this spot open for you, let\u2019s get it moved to tomorrow, Thursday. Does [Time A, e.g., 10:00 AM] or [Time B, e.g., 2:00 PM] work better on your side?\"<i data-path-to-node=\"11,1,0\" data-index-in-node=\"0\">(They pick a time)</i><i data-path-to-node=\"11,1,0\" data-index-in-node=\"0\">\n</i><b data-path-to-node=\"11,2,0\" data-index-in-node=\"0\">You:</b> \"Perfect. Look, to make sure our system officially reserves your spot and doesn't release it, I\u2019m sending the updated meeting link to your email right now while we're on the line. Can you quickly open that up and click <b data-path-to-node=\"11,2,0\" data-index-in-node=\"224\">'Accept'</b> for me so I know for a fact your spot is locked in?",
+        "cue": "Yeah, dealership spam filters are notorious for blocking external files.\n\n\n\n\n\u00a0Look, instead of us going back and forth with emails getting lost in spam, this is why we have meetings\u00a0\n\n\u00a0it\u2019s honestly going to be much faster for both of us to just jump on a quick 10-minute screen-share tomorrow.\n\nI can show you the exact workflow right in front of you, and you can decide right there on the call whether it\u2019s worth it for your floor or not.\u00a0\n\n\n\n\nDo you have a quick 10 minutes tomorrow, Thursday, at 10:00 AM or 2:00 PM",
         "stageNote": "Direct course of action. Either re-lock or cleanly archive.",
         "_isCustomEdited": true
       },
@@ -467,7 +467,7 @@ const SCRIPT_DATA = {
         "type": "rep",
         "speaker": "Rep",
         "text": "Locked in for [Day] at [Time].\n\nKea will update the calendar invite right now. Please do me a favor and hit 'Accept' as soon as you see it so the slot stays reserved.\n\nAnd we'll ping the 1-click link to your WhatsApp 5 minutes before so you don't have to hunt for it on the floor. Speak then, [Name]!",
-        "cue": "Sharp. Let me just confirm your email address so the calendar invite doesn't get blocked—is it [read out email]?\n\nOkay, I’m sending that meeting link over right now while we're on the line. Can you quickly open that up and click 'Accept' for me so I know for a fact it bypassed your spam filter and your spot is locked in?\"",
+        "cue": "Sharp. Let me just confirm your email address so the calendar invite doesn't get blocked\u2014is it [read out email]?\n\nOkay, I\u2019m sending that meeting link over right now while we're on the line. Can you quickly open that up and click 'Accept' for me so I know for a fact it bypassed your spam filter and your spot is locked in?\"",
         "stageNote": "Firm commitment. WhatsApp 5-minute link reminder.",
         "_isCustomEdited": true
       }
@@ -479,7 +479,7 @@ const SCRIPT_DATA = {
         "triggerKey": "H",
         "regexPattern": "\\b(haven't (had )?(time|looked|read)|busy|not yet|didn't get around)\\b",
         "bulletSummary": "Zero Homework Frame -> 10-Minute Screen-Share Shortcut",
-        "repScript": "100%, I didn't expect you to do homework between customer deliveries! That's actually why I called—it's much faster for me to just show you the 3-minute workflow on screen this Thursday rather than you reading through PDFs. Would morning or afternoon suit your floor?"
+        "repScript": "100%, I didn't expect you to do homework between customer deliveries! That's actually why I called\u2014it's much faster for me to just show you the 3-minute workflow on screen this Thursday rather than you reading through PDFs. Would morning or afternoon suit your floor?"
       },
       {
         "id": "obj-fu-resend",
@@ -487,7 +487,7 @@ const SCRIPT_DATA = {
         "triggerKey": "S",
         "regexPattern": "\\b(resend|send (it )?again|didn't (get|receive)|lost the email)\\b",
         "bulletSummary": "Firewall Spam Check -> WhatsApp 1-Click Ping",
-        "repScript": "No problem at all—dealership firewalls often filter external links. Let me confirm the spelling of your email: [spell back]. And what's your direct cell? I'll have Kea WhatsApp the 1-click video right now so you have it in your pocket."
+        "repScript": "No problem at all\u2014dealership firewalls often filter external links. Let me confirm the spelling of your email: [spell back]. And what's your direct cell? I'll have Kea WhatsApp the 1-click video right now so you have it in your pocket."
       },
       {
         "id": "obj-fu-notinterested",
@@ -495,7 +495,7 @@ const SCRIPT_DATA = {
         "triggerKey": "N",
         "regexPattern": "\\b(not interested|not for us|we're good|don't need it)\\b",
         "bulletSummary": "Curiosity Pivot -> 100% Approval vs Internal Process Check",
-        "repScript": "Understood, [Name]—just so I don't bug you again in the future: is that because your banks are approving 100% of your applications right now, or because your floor already has an internal desk recovering the turn-downs?"
+        "repScript": "Understood, [Name]\u2014just so I don't bug you again in the future: is that because your banks are approving 100% of your applications right now, or because your floor already has an internal desk recovering the turn-downs?"
       },
       {
         "id": "obj-fu-delivery",
@@ -503,165 +503,510 @@ const SCRIPT_DATA = {
         "triggerKey": "D",
         "regexPattern": "\\b(with a (client|customer)|delivery|signing|handover|busy on floor)\\b",
         "bulletSummary": "Floor Priority Exit -> Callback Lock",
-        "repScript": "Go deliver that car! What time should I ring your desk back—2:00 PM or first thing tomorrow?"
+        "repScript": "Go deliver that car! What time should I ring your desk back\u20142:00 PM or first thing tomorrow?"
       },
       {
         "id": "obj-coldcall-1792564533106",
         "triggerKey": "?",
         "label": "New Card",
         "title": "PUSHBACK TO A MEETING.",
-        "bulletSummary": "THEY PUsh Back to an a meeting still want an email. \n\n",
-        "repScript": "<b data-path-to-node=\"17,0,0\" data-index-in-node=\"0\">You:</b> \"No problem at all. Just so it doesn't disappear into the spam folder again—are you currently sitting at your desk right now?\"\n<i data-path-to-node=\"17,1,0\" data-index-in-node=\"0\">(If Yes)</i>: \"Awesome, let me just confirm I have the spelling right: is it <b data-path-to-node=\"17,1,0\" data-index-in-node=\"73\">[read out email]</b>? I’ve just hit send on a fresh copy right now. Can you quickly check your inbox or spam folder while I'm on the line just so we know for a fact it came through?\"\n<i>ill send it right now</i>. Have a look through that today when you get two minutes. Instead of me calling&nbsp; you again, just reply directly to that email to let me know whether or not you want to jump on a quick call. If I don't hear back by Friday, I'll assume it's not a priority for this quarter and take you off my call list. Fair enough?"
+        "bulletSummary": "THEY PUsh Back to an a meeting still want an email.\u00a0\n\n",
+        "repScript": "<b data-path-to-node=\"17,0,0\" data-index-in-node=\"0\">You:</b> \"No problem at all. Just so it doesn't disappear into the spam folder again\u2014are you currently sitting at your desk right now?\"\n<i data-path-to-node=\"17,1,0\" data-index-in-node=\"0\">(If Yes)</i>: \"Awesome, let me just confirm I have the spelling right: is it <b data-path-to-node=\"17,1,0\" data-index-in-node=\"73\">[read out email]</b>? I\u2019ve just hit send on a fresh copy right now. Can you quickly check your inbox or spam folder while I'm on the line just so we know for a fact it came through?\"\n<i>ill send it right now</i>. Have a look through that today when you get two minutes. Instead of me calling&nbsp; you again, just reply directly to that email to let me know whether or not you want to jump on a quick call. If I don't hear back by Friday, I'll assume it's not a priority for this quarter and take you off my call list. Fair enough?"
       },
       {
         "id": "obj-coldcall-1792564941195",
         "triggerKey": "?",
         "label": "New Card",
-        "title": "NOT A PRIOTY NOW ",
+        "title": "NOT A PRIOTY NOW\u00a0",
         "bulletSummary": "Summary of how to counter this objection...",
-        "repScript": "No problem at all, I appreciate you being upfront with me. Like I said, I know how busy the floor gets.\nWhat I’ll do is release your spot for now, and I'll make a note on your file for when our next intake opens up next month [or next quarter]. Are you okay with me reaching back out to you then to see if anything has changed on your side\nAwesome, I'll check in with you then. Have a great rest of your week, [Name]."
+        "repScript": "No problem at all, I appreciate you being upfront with me. Like I said, I know how busy the floor gets.\nWhat I\u2019ll do is release your spot for now, and I'll make a note on your file for when our next intake opens up next month [or next quarter]. Are you okay with me reaching back out to you then to see if anything has changed on your side\nAwesome, I'll check in with you then. Have a great rest of your week, [Name]."
       }
     ]
   },
-  "cbfleads": {
+  "cbf_closer": {
     "blocks": [
       {
-        "id": "cbf-part1-intro",
+        "id": "cbf-closer-c-clarify",
         "phase": 1,
-        "phaseName": "STAGE 1: ACKNOWLEDGE & REASSURE",
-        "section": "Part 1: The Referral Hook",
+        "phaseName": "C \u2014 CLARIFY",
+        "section": "C \u2014 Clarify: Screen Sync & Denial Removal (Mins 0\u20132)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "Hi [Name], how's it going?\n\nYou're speaking to KEA, I’m calling from Credit Builder Flow. SupremeAuto referred you to us after your application was rejected.\n\nThey told us your credit might need a bit of work before you can get approved — so we’re here to help with that. Do you have a few minutes?",
-        "cue": "Wait for prospect: 'Yes, I have a few minutes / What is this about?'",
-        "stageNote": "Warm, reassuring, peer tonality. Frame the call as an exclusive referral partnership from their dealership."
+        "speaker": "CBF Closer",
+        "text": "Hi [Prospect Name], this is [Rep Name] from Credit Boost Finance. How are you doing today?\n\n[PAUSE \u2014 wait for them to respond]\n\nAwesome. I've got your audit file open in front of me right now. Are you near your phone where you can open the secure link I sent you on WhatsApp?\n\n[Wait for confirmation: 'Yes, I have it open']\n\nPerfect. In three seconds, I'm going to unlock your screen so you can see exactly what the banks saw when they turned down your car application. Tell me as soon as your screen updates.\n\n[Wait for prospect: 'Yes, I see it!']\n\nGreat. Keep that screen open in front of you. What you're looking at right now is the exact reason the bank couldn't approve your finance. Let's walk through it together.",
+        "cue": "Prospect confirms their screen is updated with the audit report. Do not proceed until they are looking at their own numbers.",
+        "stageNote": "Specialist advisor tonality. Eliminate denial by anchoring their eyes on their real data."
       },
       {
-        "id": "cbf-part1-qualify",
-        "phase": 1,
-        "phaseName": "STAGE 1: ACKNOWLEDGE & REASSURE",
-        "section": "Part 1: 3 Diagnostic Questions & Doc Request",
-        "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "Awesome. I just need to ask you a few quick qualifying questions to see if this service will be able to assist you, and request a few documents from you:\n\n1. How much is your current credit score?\n\n2. Do you know the reason for your rejections?\n\n3. How soon are you looking for a car?\n\nWe're going to analyze your documents and try to understand what the issue is. If you do qualify, one of our consultants will contact you to assist you with your journey.",
-        "cue": "Listen actively. Capture credit score, rejection reason, and target timeframe in the Lead Notes.",
-        "stageNote": "Collect baseline facts. Do not debate their rejections yet. Request ID, 3-month bank statement, and payslip."
-      },
-      {
-        "id": "cbf-part2-solution",
+        "id": "cbf-closer-l-label",
         "phase": 2,
-        "phaseName": "STAGE 2: INTRODUCE CBF SOLUTION",
-        "section": "Part 2: 60-90 Day Shot at Approval",
+        "phaseName": "L \u2014 LABEL",
+        "section": "L \u2014 Label: Exposing the 3 Red Flags (Mins 2\u20135)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "We created something called the Credit Builder Flow — it’s a short, no-risk program that helps you rebuild your score fast and gives you a shot at approval — often within 60–90 days.\n\n[PAUSE — Wait for prospect to respond]\n\nYou’ll get a personalized plan, credit tools, and hands-on support — you can even test it with a 14-day free trial.\n\nSo, if you are tired of getting declined for financing, this is built for you.\n[Reduce tone / soften cadence]\n\nI can quickly explain exactly how it works — would that be helpful?",
-        "cue": "Prospect confirms: 'Yes, please explain / How does it work?' (If they are busy, immediately lock an exact callback time).",
-        "stageNote": "Downward inflection on 'built for you'. Pitch the 14-day free trial and fast 60–90 day timeline."
+        "speaker": "CBF Closer",
+        "text": "When the bank's system looked at your application, it flagged three specific red flags.\n\nLook at the first red box at the top of your screen. That\u2019s your Overdue Accounts. The bank saw [X accounts] where payments were missed or fell behind. Even if you made payments later, the bank\u2019s computer sees an open overdue flag and automatically tags your profile as high risk.\n\nNow look at the second box below it. That's your Bank Statement Record. The computer scans your last 90 days for two things: debit orders that didn't go through, and small quick-cash loans. When a bank sees debit orders bouncing or money going to payday lenders, their system automatically flags it as cash-flow stress.\n\nAnd the third box at the bottom is your Debt-to-Income Balance. Right now, the total amount you owe on your cards and store accounts is eating up too much of your monthly salary. Even though you earn enough money to pay for the car, on paper the bank calculates that adding a car instalment and insurance leaves you with almost zero safety buffer.",
+        "cue": "Listen for recognition: 'Yes, that makes sense.' If the prospect launches into a long backstory, execute the 10-Second Compassionate Reset: 'I completely understand life happens, but the bank's computer doesn't read stories\u2014it only reads the numbers.'",
+        "stageNote": "Strictly diagnostic ('What' & 'Why'). Never prescribe 'How' yet. Speak in plain human language."
       },
       {
-        "id": "cbf-closer-clarify-label",
+        "id": "cbf-closer-o-overview",
         "phase": 3,
-        "phaseName": "STAGE 3: C.L.O.S.E.R. — CLARIFY & LABEL",
-        "section": "C & L: The 4 Diagnostic Commitments",
+        "phaseName": "O \u2014 OVERVIEW",
+        "section": "O \u2014 Overview: The 2 Fatal DIY Mistakes (Mins 5\u20136)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "Ok, based on what the finance team said, they rejected you due to the low credit score, meaning if you do not fix this issue, you won't be able to get financing for your vehicle:\n\n1. Are you aware of your score being low? (e.g. accounts in arrears?)\n\n2. Do you know why it's so low?\n\n3. If nothing changes in the next 3 to 6 months, do you think you'll qualify for that car?\n\n4. If I could help you rebuild your score and get approved again in 60 to 90 days — with support along the way — is that something you’d take seriously?",
-        "cue": "Prospect commits: 'Yes, I would take that seriously / I need to fix this.'",
-        "stageNote": "Label the exact pain point: low credit score = zero financing. Anchor seriousness before presenting the path."
+        "speaker": "CBF Closer",
+        "text": "Now, most people in your shoes make one of two big mistakes right now:\n\nFirst, they run to two or three other car dealerships hoping another bank will say yes. But every time a dealership submits your name, the banks pull your credit record again. When the system sees four or five declines in one month, your score drops further and the banks lock your profile for six months.\n\nThe second mistake is people try to guess what to pay off. They take their hard-earned cash, pay off an old account, but they don't get the legal clearance letter sent to the credit bureaus. Six months later, the bureau still shows the red flag, and the bank declines them again.\n\nIf you try to fix this by guessing, you burn money and end up stuck without a car for another year.",
+        "cue": "Prospect acknowledges: 'I was thinking of going to another dealer' or 'That makes sense.'",
+        "stageNote": "Firm, preventative tone. Stop inquiry suicide and unstructured debt payoff."
       },
       {
-        "id": "cbf-closer-past-trials",
+        "id": "cbf-closer-s-verifygate",
         "phase": 4,
-        "phaseName": "STAGE 4: C.L.O.S.E.R. — OVERVIEW PAST TRIALS",
-        "section": "O: Past Trials & Errors",
+        "phaseName": "S \u2014 SELL THE VACATION",
+        "section": "S \u2014 Sell the Vacation: The Verify Gate & Audit Grant (Mins 6\u20137)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "I hear you.\n\nWhat have you tried in the past to solve these credit issues?\n\n...And how did that work out for you?",
-        "cue": "Prospect explains previous struggles (e.g. paid bad agencies, tried disputing themselves, ignored it).",
-        "stageNote": "Empathize deeply. Let them acknowledge that DIY attempts and past agencies left them stuck in the victim loop."
+        "speaker": "CBF Closer",
+        "text": "Now, here is the good news:\n\nOur underwriting team ran your numbers through our system, and your profile is 100% fixable within 90 to 120 days.\n\nBecause your file meets all our legal criteria, you officially qualify for our 100% Money-Back Guarantee Recovery Program.\n\nThat means we take your file directly to the credit bureaus, clear these exact three red flags, and rebuild your profile so that when [Dealership Name] re-submits your application, the bank's system gives an automatic green approval.\n\nLet me show you exactly how the recovery program works and how we protect your money...",
+        "cue": "ZERO PAUSE. Pivot directly into the 90-day destination without hanging up or pausing.",
+        "stageNote": "High-value scarcity grant. Confirm qualification before laying out the roadmap."
       },
       {
-        "id": "cbf-closer-habits-plan",
+        "id": "cbf-closer-s-roadmap",
+        "phase": 4,
+        "phaseName": "S \u2014 SELL THE VACATION",
+        "section": "S \u2014 Sell the Vacation: 90\u2013120 Day Destination & SPOA Shield (Mins 7\u20139)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "To get you approved, we don't just give you advice and leave you to do the work. We execute a 10-step recovery roadmap for you.\n\nFirst, we act under a digital Special Power of Attorney. That means our legal compliance team deals directly with the credit bureaus and credit providers on your behalf. You don't have to spend hours on hold or argue with call centers.\n\nSecond, we dispute outdated and unlawful listings, negotiate paid-up clearance certificates, and restructure your profile so the bank's approval algorithm sees you as a prime, low-risk buyer.\n\nAnd third, the moment your file turns green, we notify [Dealership Name] so they can pull your approved car straight onto the delivery floor.",
+        "cue": "Prospect responds: 'That would be a huge relief / How do we start?'",
+        "stageNote": "Sell the destination and hands-free legal shield. Position SPOA as protection."
+      },
+      {
+        "id": "cbf-closer-e-risktax",
         "phase": 5,
-        "phaseName": "STAGE 5: C.L.O.S.E.R. — SELL THE VACATION",
-        "section": "S: The 3 Key Habits & The Action Plan",
+        "phaseName": "E \u2014 EXPLAIN AWAY CONCERNS",
+        "section": "E \u2014 Explain Concerns: 72-Month Subprime Risk Tax Math (Mins 9\u201311)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "Completely hear you. What we’ve seen with our most successful clients is that they all have these 3 key habits that helped boost their scores:\n\n1. Responsibility (Breaks the victim loop): As soon as they take full responsibility, they stop stalling and start acting.\n\n2. Change of Identity: You no longer become someone who skips payments or feels ashamed. The goal becomes personal.\n\n3. Consistency, not perfection: Lower the fear. Consistency in the first two steps is what unlocks bank approval.\n\nAnd that’s exactly what this program is for — it helps you with all 3.\n[Wait for response]\n\nSo here’s what I’d like to do:\nWe’ll start by pulling your credit report to see exactly what’s holding you back.\nThen, we’ll kick off your 14-day free trial to show you how the process works.\nIf you believe this can help you get the car you want, we’ll keep working together until you’re driving off in your dream car.\n\nSound good?",
-        "cue": "Prospect responds: 'Sound good / Yes, let's do it.'",
-        "stageNote": "Triggers psychological ownership. If prospect needs deeper emotional grounding, deploy one of the 4 Pillars."
+        "speaker": "CBF Closer",
+        "text": "Now, look at the interest numbers on your screen for that {{vehicle_price}} vehicle.\n\nRight now, with red flags on your credit, the only places that would even consider you are subprime lenders or rent-to-own schemes charging around {{subprime_rate}} interest.\n\nAt {{subprime_rate}}, you are throwing away {{risk_tax_monthly}} every single month just in interest penalties. That is {{risk_tax_annual}} a year\u2014and over 72 months, that is {{risk_tax_total}} in pure Risk Tax stolen from your family.\n\nOnce we clear your record and get you back to prime bank rates around {{prime_rate}}, you save that entire {{risk_tax_monthly}} every month.\n\nSo fixing your credit isn't an expense\u2014it literally puts {{risk_tax_annual}} back in your bank account every year.",
+        "cue": "Prospect reacts to the numbers: 'That is crazy / I didn't realize it was that much.'",
+        "stageNote": "Anchors the live Risk Tax calculator numbers. Contrast R499/R799 fee against R24,000/yr lost interest."
       },
       {
-        "id": "cbf-closer-vacation-pillars",
+        "id": "cbf-closer-e-guarantee",
         "phase": 5,
-        "phaseName": "STAGE 5: C.L.O.S.E.R. — SELL THE VACATION",
-        "section": "S: The 4 Pillars of Readiness (Pitch Library)",
+        "phaseName": "E \u2014 EXPLAIN AWAY CONCERNS",
+        "section": "E \u2014 Explain Concerns: 100% Guarantee & 4 Golden Rules (Mins 11\u201313)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "[Deploy the Pillar matching their primary emotional driver]:\n\nA. The Vacation from the 'Shame of the Decline':\n\"Imagine walking into that dealership in 4 months. You aren’t nervous. You aren’t wondering if they’ll say yes. You’ve already seen your audit. You know your data is green. You walk in as the one in control of the deal.\"\n\nB. The Vacation from the 'Taxi / Uber Tax':\n\"The vacation is that first Monday morning where you don't have to stand in the rain at the taxi rank or check your Uber app to see if you can afford to get to work. It’s the 45 minutes you get back every morning with your kids because you have your own keys.\"\n\nC. The Vacation from 'Predatory Interest':\n\"We aren't just getting you a car; we are moving you out of the poverty trap. At 12% interest instead of 25%, you save R1,500 every single month. That’s R18,000 a year back in your pocket for school fees or a real family holiday.\"\n\nD. The Vacation of 'Financial Legitimacy':\n\"Once we fix this for the car, you are in with the banks. This isn't just about a vehicle; it’s about being able to get a home loan or prime credit facility at top tier rates for the rest of your life.\"",
-        "cue": "Prospect connects emotionally: 'That's exactly what I need.'",
-        "stageNote": "Sell the Experience of Readiness. Never promise illegal 'guaranteed approval'—promise algorithmic readiness."
+        "speaker": "CBF Closer",
+        "text": "Because we know our system works, we take on 100% of the risk.\n\nWe give you a written 100% Money-Back Guarantee. If we don't improve your profile and get you bank-ready within our agreed timeline, you get every single cent of your money back. No arguments.\n\nAll we ask is that you follow four simple golden rules while we do the heavy lifting:\n1. Don't apply for any new credit or store cards while we work.\n2. Pay your existing current accounts on time every month.\n3. Don't gamble or bounce debit orders on your bank account.\n4. Respond when our legal team requests a quick signature or clearance proof.\n\nAs long as you do your part, we guarantee the result.",
+        "cue": "Prospect agrees: 'I can definitely do that / That sounds fair.'",
+        "stageNote": "Frame guarantee as a partnership. 4 rules protect our underwriting integrity."
       },
       {
-        "id": "cbf-closer-resell-subscription",
+        "id": "cbf-closer-r-activation",
         "phase": 6,
-        "phaseName": "STAGE 6: C.L.O.S.E.R. — RESELL & ONBOARD",
-        "section": "E & R: The Subscription Reveal & Risk-Free Close",
+        "phaseName": "R \u2014 REINFORCE DECISION",
+        "section": "R \u2014 Reinforce Decision: PayFast Activation & Digital SPOA Lock (Mins 13\u201315)",
         "type": "rep",
-        "speaker": "KEA / Rep",
-        "text": "Awesome! To get there, we use the Flow System:\n\n• Professional Subscription: R399 per month.\n• 14-Day Free Trial: You pay nothing today. We start your Forensic Audit and build your 180-day sequencing map immediately.\n• Active Management: This isn't a one-time fix. We manage your profile every 30 days, adjusting your strategy as the bureaus update, until your data matches the bank's approval algorithm.\n• Risk-Free: If after 14 days you don't believe our map will get you the keys to that [Car Model], you cancel and walk away.\n\nDoes it make sense to invest R399 to stop wasting thousands on a car deal that will never happen?\n\nI'm going to send you the direct link to the app right now where you can upload your documents and information directly so we can get your audit started immediately.",
-        "cue": "Send the direct link to the app so the prospect can upload their information and documents directly.",
-        "stageNote": "R399 vs R18,000 predatory interest. Risk-free trial. Send direct app upload link."
+        "speaker": "CBF Closer",
+        "text": "Awesome. To activate your file and start your legal bureau filings today, there is a one-time activation fee of R499 [or R799 for Tier 2].\n\nI've just popped the secure PayFast link onto your WhatsApp. You can do an instant EFT or card payment safely right now while I'm on the line.\n\nAs soon as that processes, the digital Special Power of Attorney will open up for you to sign with your finger in 10 seconds.\n\nOnce that's signed, our legal team opens your case within 24 hours, and I'll send an official update to the sales team at [Dealership Name] to reserve that vehicle spot for you.\n\nGo ahead and tap that link on your screen now\u2014I'll wait right here while it confirms.",
+        "cue": "Stay on the line while PayFast checkout and digital SPOA signature complete.",
+        "stageNote": "Calm, matter-of-fact tonality. Never hang up before payment and SPOA signature confirm."
       }
     ],
     "objections": [
       {
-        "id": "obj-cbf-price",
-        "title": "Why do I have to pay R399?",
-        "triggerKey": "P",
-        "regexPattern": "\\b(r399|why do i pay|why must i pay|cost|fee|charge|free|expensive|can't afford|afford)\\b",
-        "bulletSummary": "R399 vs R1,500/mo Taxi & Interest Trap (14-Day Free Trial)",
-        "repScript": "You pay nothing today — your first 14 days are completely free. If our forensic map doesn't show you the exact route to getting approved for your vehicle, you cancel and pay zero. Once active, R399 a month protects you from spending R1,500 every single month on taxis or paying 28% subprime interest that drains R18,000 extra per year. Does it make sense to test it for free today?"
+        "id": "obj-cbf-fee",
+        "title": "Why is there an activation fee today?",
+        "triggerKey": "A",
+        "regexPattern": "\\b(activation fee|pay today|why pay now|r499|r799|upfront|free service)\\b",
+        "bulletSummary": "R499/R799 Activation vs R24,000 Annual Risk Tax Bleed",
+        "repScript": "The R499 activation fee covers your forensic legal audits and covers the costs of our compliance team filing direct legal disputes with the bureaus under your Power of Attorney. Remember, waiting or going to a subprime lender burns over R1,500 every single month in penalty interest. Paying R499 once protects you under our 100% Money-Back Guarantee and saves you over R18,000 a year."
       },
       {
         "id": "obj-cbf-guarantee",
         "title": "Can you guarantee I get approved?",
         "triggerKey": "G",
         "regexPattern": "\\b(guarantee|guaranteed|promise|100%|sure|definitely|certain)\\b",
-        "bulletSummary": "Experience of Readiness & Bank Algorithm Matching",
-        "repScript": "No legitimate financial service can legally promise bank approval because the banks make the final lending call. What we guarantee is the Experience of Readiness: we audit your bureau data, identify the exact adverse accounts and DTI ratios triggering bank rejections, and sequence your profile until your data matches the bank's approval algorithm. When you walk back into the dealership, your file is green."
+        "bulletSummary": "100% Money-Back Guarantee on Algorithmic Bank Readiness",
+        "repScript": "No legitimate service can illegally guarantee what a bank will decide, because the banks make the final lending call. What we DO guarantee is your result with our 100% Money-Back Guarantee: if our legal team does not clean your red flags and bring your file into green bank-ready status within 90 to 120 days, we refund every single cent you paid us."
+      },
+      {
+        "id": "obj-cbf-dealer",
+        "title": "Can't I just try another dealership?",
+        "triggerKey": "D",
+        "regexPattern": "\\b(another dealership|other dealer|try somewhere else|another lot|apply elsewhere)\\b",
+        "bulletSummary": "Signio Inquiry Lock \u2014 Multiple Declines Freeze Profile for 6 Months",
+        "repScript": "That is the quickest way to get locked out of vehicle finance for six months. In South Africa, all major dealerships submit applications through the same banking systems. When the banks see 3 or 4 declines in a couple of weeks, their algorithm flags you for credit seeking and locks your profile. Fixing the data with us first ensures your next application is an automatic approval."
       },
       {
         "id": "obj-cbf-blacklisted",
         "title": "I'm blacklisted / bad credit",
         "triggerKey": "B",
         "regexPattern": "\\b(blacklisted|bad credit|adverse|default|judgment|arrears|low score)\\b",
-        "bulletSummary": "Rehabilitation vs Permanent Brand",
-        "repScript": "That is exactly why SupremeAuto referred you to Credit Builder Flow! Over 80% of our clients were declined for low scores or adverse listings. Being 'blacklisted' simply means there are adverse listings or outdated default flags on your bureau profile. We pull your full report, dispute errors, negotiate settlements, and rehabilitate your score in 60 to 90 days."
-      },
-      {
-        "id": "obj-cbf-debtreview",
-        "title": "Is this Debt Review?",
-        "triggerKey": "D",
-        "regexPattern": "\\b(debt review|debt counselling|under debt|counsellor|consolidation)\\b",
-        "bulletSummary": "NOT Debt Review — No Bureau Freeze or Legal Lock",
-        "repScript": "No, absolutely not. Debt review locks your profile and legally prevents you from buying a vehicle or accessing credit for years. Credit Builder Flow does the exact opposite: we do forensic rehabilitation to clean your profile and optimize your debt-to-income ratio so the banks approve your vehicle finance as fast as possible."
+        "bulletSummary": "Adverse Listing Rehabilitation vs Permanent Brand",
+        "repScript": "That is exactly why [Dealership Name] referred you to Credit Boost Finance! Over 80% of our clients were declined for adverse listings or defaults. Being 'blacklisted' just means there is negative data sitting on your bureau file. Under the National Credit Act, you have the legal right to dispute outdated listings, settle accounts with formal clearance certificates, and clear your record."
       },
       {
         "id": "obj-cbf-scam",
         "title": "Burnt before / tried other agencies",
-        "triggerKey": "C",
+        "triggerKey": "S",
         "regexPattern": "\\b(scam|scammed|burnt|fraud|tried before|other company|agencies|fly by night)\\b",
-        "bulletSummary": "Dealership-Referred & 14-Day Zero-Risk Free Trial",
-        "repScript": "I completely understand your caution — there are many operators out there who take money and vanish. That is why SupremeAuto directly partners with us, and that is why we give you a 14-Day Free Trial where you pay R0 today. You only stay if you see real forensic audit results and a step-by-step sequencing plan for your vehicle."
+        "bulletSummary": "Direct Dealership Referral Partner & Written Money-Back Guarantee",
+        "repScript": "I completely understand why you're cautious\u2014there are fly-by-night operators who take people's money and disappear. That is why [Dealership Name] directly partners with us and referred you to our deal desk. It's also why we back our work with a written 100% Money-Back Guarantee and an official digital Power of Attorney registered with our legal team."
       },
       {
         "id": "obj-cbf-timeline",
         "title": "How long will this take?",
         "triggerKey": "T",
         "regexPattern": "\\b(how long|time|timeline|urgent|need car now|today|fast|waiting)\\b",
-        "bulletSummary": "60–90 Day Window vs Endless Dead Declines",
-        "repScript": "Right now, walking into another dealership will just trigger another bank rejection and pull your credit score down further. With our sequencing map, most clients achieve bank-ready status within 60 to 90 days. We start your forensic audit within 24 hours of receiving your documents so we don't waste a single day."
+        "bulletSummary": "90\u2013120 Days Legal Resolution vs Years of Rejections",
+        "repScript": "By law, the credit bureaus have 20 business days to respond to formal legal disputes. Most of our clients have their first major red flags cleared within 60 days, and reach full bank-ready status within 90 to 120 days. We start drafting your dispute notices within 24 hours of receiving your signed SPOA."
+      }
+    ],
+    "failBranches": [
+      {
+        "id": "fail-cbf-unsalvageable",
+        "title": "Path B: Unsalvageable (>12 Mos)",
+        "triggerKey": "K3",
+        "bulletSummary": "Severe Arrears & DTI > 12 Mos \u2014 Compassionate exit & Co-buyer pivot back to dealer",
+        "repScript": "Look [Prospect Name], our underwriting team finished reviewing your full audit, and I want to be 100% transparent with you so we never waste your money. Because we offer a 100% Money-Back Guarantee, we only take on clients we know we can get bank-ready within 90 to 120 days.\n\nWith your current arrears and salary balance, clearing this profile solo would take between 12 and 18 months of aggressive repayments. Charging you our fee wouldn't be fair to you.\n\nWhat we ARE doing is giving you free access to our Safe Spend Budget Reset guide so you can start clearing those accounts yourself. And if you have a spouse, partner, or family member who earns R11,000+ with clean credit, let us know and we can submit them as a co-buyer directly to [Dealership Name] to get the car today."
+      },
+      {
+        "id": "fail-cbf-debtreview",
+        "title": "Active Debt Review / Admin",
+        "triggerKey": "K2",
+        "bulletSummary": "Statutory Legal Lock on ID \u2014 Banks are legally barred from granting vehicle finance under NCA",
+        "repScript": "I see. Look [Prospect Name], I need to be completely honest with you: under the National Credit Act, as long as you have an active Debt Review or Administration notice attached to your ID number, no registered bank or vehicle finance institution in South Africa is legally allowed to approve financing for you.\n\nAny company promising they can get you car finance while under debt review is misleading you. The only way to buy a vehicle is to first receive a formal clearance certificate from your debt counsellor. For now, we cannot take on your file, but we recommend you focus on completing that clearance before applying again."
+      },
+      {
+        "id": "fail-cbf-income",
+        "title": "Income Under R11,000 Net",
+        "triggerKey": "K1",
+        "bulletSummary": "NCA Bank Affordability Rule \u2014 Cannot legally approve solo. Pivot to co-buyer or cheaper car.",
+        "repScript": "Look, [Prospect Name], I want to be 100% straight with you so we don't waste your time. The banks have very strict affordability rules. When they calculate your risk, they look at basic living costs like rent and groceries. Once you add a car payment and insurance on top of that, if you take home under R11,000, the bank's system legally flags it as too high risk and automatically declines it.\n\nRight now, our program wouldn't be able to get you approved on your own with that take-home pay. Your best option right now is to either look at a much cheaper car, or speak to [Dealership Name] about putting a co-buyer on the application with you who earns a bit more."
+      },
+      {
+        "id": "fail-cbf-grossdiscrepancy",
+        "title": "Gross vs. Net Discrepancy",
+        "triggerKey": "K4",
+        "bulletSummary": "Net pay into bank is less than reported on form \u2014 Banks read single-account net deposit.",
+        "repScript": "I see what happened. On the form you put down R[X], but your bank statement shows that after deductions, medical aid, and tax, your actual take-home deposit is lower. The bank's credit algorithm only reads the single net deposit hitting your account, not your gross salary. Because of that, the bank's affordability calculation drops below their lending threshold. Let's look at having a co-buyer join your application to bridge that gap."
+      }
+    ]
+  },
+  "cbf_screening": {
+    "blocks": [
+      {
+        "id": "cbf-scr-greeting",
+        "phase": 1,
+        "phaseName": "STAGE 1: GREETING & ATTRIBUTION HOOK",
+        "section": "Screening \u00b7 Beat 1: The Attribution Hook (First 15 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "Hi [Prospect Name], this is [Rep Name] from Credit Boost Finance. How are you doing today?\n\n[PAUSE \u2014 wait for them to respond: 'I'm good, and you?']\n\nI'm good, thanks! I'm calling because I see you filled out a form with us after getting turned down for financing on a vehicle at [Dealership Name]. I'm reaching out to see if we can help you get that car approved.",
+        "cue": "Wait for prospect confirmation before proceeding.",
+        "stageNote": "Warm, clear attribution. Let them know we called because of their dealership application."
+      },
+      {
+        "id": "cbf-scr-filter",
+        "phase": 2,
+        "phaseName": "STAGE 2: COMPLIANCE & HONESTY FILTER",
+        "section": "Screening \u00b7 Beat 2: The Honesty & Compliance Sieve (15 to 60 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "Just before we start, please note that this call is recorded for quality and assurance purposes.\n\nI just want to verify some of the information you sent through on the form to make sure our numbers are right.\n\nOn the form, you put down that you take home around R[X] a month. Is that the exact amount that hits your bank account after all deductions and tax, or is that before tax?\n\n[IF BEFORE TAX OR UNDER R11,000 NET: Trigger Fail Branch K1 \u2014 Income Under R11k]\n\n[IF R11,000+ NET:]\nAnd are you currently under Debt Review, administration, or anything like that where a court or debt counsellor handles your accounts?\n\n[IF YES: Trigger Fail Branch K2 \u2014 Active Debt Review]",
+        "cue": "Verify exact net take-home deposit into bank. If <R11k or Debt Review, deploy Fail Branch K1 or K2 immediately.",
+        "stageNote": "Hard sieve. Do not send upload link or waste tokens if they fail net income or debt review."
+      },
+      {
+        "id": "cbf-scr-clarity",
+        "phase": 3,
+        "phaseName": "STAGE 3: DEALERSHIP VS. BANK CLARITY",
+        "section": "Screening \u00b7 Beat 3: De-escalating Anxiety (60 to 120 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "Now, I want you to understand one thing: it wasn't [Dealership Name] that turned you down. The dealership wanted to hand you the keys today! It was the bank that declined your finance.\n\nTo fix this, we need to look at exactly what the banks saw when they ran your application.\n\nThe banks look at two main things:\nFirst, your credit report. They want to see: do you owe anyone else money, and how do you pay that person back? Are you paying on time, or are there late payments?\n\nSecond, your 3-month bank statement. They want to see: how do you manage your money day-to-day? Are debit orders bouncing, or do you have too many small loans eating up your cash?\n\nWe don't care where you buy your groceries or what you spend on the weekends\u2014we only look at the numbers the bank's system is using against you.",
+        "cue": "Prospect relieves tension: 'Okay, I understand.'",
+        "stageNote": "Protect dealership relationship. Reframe statements away from grocery/lifestyle judgment."
+      },
+      {
+        "id": "cbf-scr-instructions",
+        "phase": 4,
+        "phaseName": "STAGE 4: FREE AUDIT & EXPERIAN REPORT INSTRUCTIONS",
+        "section": "Screening \u00b7 Beat 4: 60-Minute Upload Commitment (120 to 180 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "So what we're going to do is give you a free audit. We'll run your documents through the same system the banks use so we can pinpoint the exact reasons you got declined, and see if you qualify for our 90-day recovery program.\n\nTo do that, we just need two things from you:\n1. Your latest 3 months' bank statements in PDF format from your banking app.\n2. Your free credit report from Experian. If you haven't downloaded it before, it's very easy: you just go to experian.co.za on your phone, sign up for free, and download your report. It takes less than 2 minutes.\n\nAre you near your phone right now? Great\u2014I'm sending you a WhatsApp message right now with the secure link where you can upload those two PDFs, along with a quick guide on getting that Experian report.\n\nCan you drop those two PDFs into that link within the next 60 minutes so our underwriting team can run your free audit today?",
+        "cue": "Prospect commits: 'Yes, I will upload them within 60 minutes.'",
+        "stageNote": "Hard 60-minute deadline commitment. Only send WhatsApp link if they passed Beats 1 & 2."
+      }
+    ],
+    "objections": [
+      {
+        "id": "obj-scr-statements",
+        "title": "Why do you need my bank statements?",
+        "triggerKey": "B",
+        "regexPattern": "\\b(bank statement|privacy|why statements|sensitive|personal account)\\b",
+        "bulletSummary": "Cash-Flow & Debit Order Scan \u2014 We Don't Care About Groceries",
+        "repScript": "I completely understand your caution. The reason the banks declined your vehicle finance is almost always hidden in the bank statements\u2014like debit orders bouncing or micro-loans draining cash. We don't care where you buy groceries or how you spend your weekends; our system only scans the raw risk numbers the banks used against you so we know how to fix them."
+      },
+      {
+        "id": "obj-scr-scam",
+        "title": "Who is Credit Boost Finance? Is this a scam?",
+        "triggerKey": "S",
+        "regexPattern": "\\b(who are you|scam|is this legit|fraud|dealer partner)\\b",
+        "bulletSummary": "Official Pre-Underwriting Partner for [Dealership Name]",
+        "repScript": "We are Credit Boost Finance\u2014we are the dedicated pre-underwriting vehicle recovery desk that works directly with [Dealership Name]. When a buyer gets turned down by the banks, the dealership sends their file to us so we can audit the profile, clear the credit red flags, and get the deal re-submitted for full bank approval."
+      },
+      {
+        "id": "obj-scr-busy",
+        "title": "I'm busy / at work right now",
+        "triggerKey": "T",
+        "regexPattern": "\\b(busy|at work|driving|call later|no time)\\b",
+        "bulletSummary": "60-Second WhatsApp Drop \u2014 Reserve Free Audit Spot",
+        "repScript": "No problem at all, I know you're busy! I\u2019m popping the secure link onto your WhatsApp right now. All you need to do is download your free Experian report and 3 months' bank statements from your banking app, and drop them in the link today so our underwriting desk can run your free audit before our intake closes."
+      },
+      {
+        "id": "obj-scr-dealer",
+        "title": "Didn't the dealership already decline me?",
+        "triggerKey": "D",
+        "regexPattern": "\\b(dealer declined|turned down already|already rejected)\\b",
+        "bulletSummary": "The Bank Declined, Not The Dealership",
+        "repScript": "The dealership actually wanted to hand you the keys! It was the bank's automated algorithm that declined your finance. That's why the dealership sent your details to us\u2014we fix the exact data points the bank rejected so you can go back to [Dealership Name] and drive off in your car."
+      }
+    ],
+    "failBranches": [
+      {
+        "id": "fail-scr-income",
+        "title": "Income Under R11,000 Net Knockout",
+        "triggerKey": "K1",
+        "bulletSummary": "NCA Bank Affordability Rule \u2014 Cannot legally approve solo. Pivot to co-buyer or cheaper car.",
+        "repScript": "Look, [Prospect Name], I want to be 100% straight with you so we don't waste your time. The banks have very strict affordability rules. When they calculate your risk, they look at basic living costs like rent and groceries. Once you add a car payment and insurance on top of that, if you take home under R11,000, the bank's system legally flags it as too high risk and automatically declines it.\n\nRight now, our program wouldn't be able to get you approved on your own with that take-home pay. Your best option right now is to either look at a much cheaper car, or speak to [Dealership Name] about putting a co-buyer on the application with you who earns a bit more."
+      },
+      {
+        "id": "fail-scr-debtreview",
+        "title": "Active Debt Review Knockout",
+        "triggerKey": "K2",
+        "bulletSummary": "Statutory Legal Lock on ID \u2014 Banks are legally barred from granting vehicle finance under NCA",
+        "repScript": "I see. Look [Prospect Name], I need to be completely honest with you: under the National Credit Act, as long as you have an active Debt Review or Administration notice attached to your ID number, no registered bank or vehicle finance institution in South Africa is legally allowed to approve financing for you.\n\nAny company promising they can get you car finance while under debt review is misleading you. The only way to buy a vehicle is to first receive a formal clearance certificate from your debt counsellor. For now, we cannot take on your file, but we recommend you focus on completing that clearance before applying again."
+      }
+    ]
+  },
+  "cbf_offramp": {
+    "blocks": [
+      {
+        "id": "cbf-offramp-diagnosis",
+        "phase": 1,
+        "phaseName": "STAGE 1: THE HONEST NCA AFFORDABILITY DIAGNOSIS",
+        "section": "Off-Ramp \u00b7 Beat 1: Protecting Their Money (0 to 30 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "Look [Prospect Name], I want to be 100% straight with you so we don't waste your time or your hard-earned money.\n\nUnder South African credit regulations and bank lending rules, when the banks look at basic living costs plus a car instalment and insurance, your current numbers legally trigger an automatic decline.\n\nBecause we only take on clients under our 100% Money-Back Guarantee when we know we can get them bank-approved in 90 to 120 days, taking your money today would not be fair to you.",
+        "cue": "Prospect appreciates the honesty: 'Thank you for being upfront.'",
+        "stageNote": "Zero sales pitch. High integrity positioning. Protects company reputation."
+      },
+      {
+        "id": "cbf-offramp-cobuyer",
+        "phase": 2,
+        "phaseName": "STAGE 2: FREE BUDGET RESET & CO-BUYER PIVOT",
+        "section": "Off-Ramp \u00b7 Beat 2: Safe Spend Guide & Dealership Co-Buyer (30 to 60 Seconds)",
+        "type": "rep",
+        "speaker": "CBF Rep",
+        "text": "Here is the best way for you to move forward right now:\n\nFirst, we are going to unlock our free Safe Spend Budget Reset guide on your profile. It shows you step-by-step how to pay down those small accounts and boost your score over the next 6 to 12 months for free.\n\nSecond, if you need that vehicle immediately, the fastest solution is to speak to the team at [Dealership Name] about adding a co-buyer\u2014like a spouse, partner, or family member who earns R11,000+ with clean credit\u2014to the application.\n\nI will make a note on your file for [Dealership Name] so they know the situation. We really appreciate your time, [Prospect Name], and wish you the best of luck!",
+        "cue": "Polite close. End call. Do NOT send any paid program or activation links.",
+        "stageNote": "Graceful exit. Pushes co-buyer deal back to partner dealership F&I."
+      }
+    ],
+    "objections": [
+      {
+        "id": "obj-off-why",
+        "title": "Why can't you help me if I pay you?",
+        "triggerKey": "W",
+        "regexPattern": "\\b(why can't you help|take my money|i will pay|let me try)\\b",
+        "bulletSummary": "100% Money-Back Guarantee Integrity",
+        "repScript": "Because we offer a 100% Money-Back Guarantee, we only accept clients when our data proves we can get them bank-approved within 90 to 120 days. If your current debt-to-income or arrears requires 12 to 18 months, taking your money would be unethical. We'd rather give you our free budget guide and help you do it at zero cost."
+      },
+      {
+        "id": "obj-off-dealer",
+        "title": "Will the dealership hold the car for me?",
+        "triggerKey": "D",
+        "regexPattern": "\\b(hold the car|keep the car|reserve car|dealership hold)\\b",
+        "bulletSummary": "Co-Buyer is the Only Immediate Hold Mechanism",
+        "repScript": "Dealerships cannot hold floor stock without an approved finance application. The fastest way to reserve that exact car is to put a qualified co-buyer\u2014like a spouse or partner\u2014on the contract today. I will notify [Dealership Name]'s sales team so they can explore that co-buyer option with you immediately."
+      }
+    ],
+    "failBranches": []
+  },
+  "cbfleads": {
+    "blocks": [
+      {
+        "id": "cbf-closer-c-clarify",
+        "phase": 1,
+        "phaseName": "C \u2014 CLARIFY",
+        "section": "C \u2014 Clarify: Screen Sync & Denial Removal (Mins 0\u20132)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Hi [Prospect Name], this is [Rep Name] from Credit Boost Finance. How are you doing today?\n\n[PAUSE \u2014 wait for them to respond]\n\nAwesome. I've got your audit file open in front of me right now. Are you near your phone where you can open the secure link I sent you on WhatsApp?\n\n[Wait for confirmation: 'Yes, I have it open']\n\nPerfect. In three seconds, I'm going to unlock your screen so you can see exactly what the banks saw when they turned down your car application. Tell me as soon as your screen updates.\n\n[Wait for prospect: 'Yes, I see it!']\n\nGreat. Keep that screen open in front of you. What you're looking at right now is the exact reason the bank couldn't approve your finance. Let's walk through it together.",
+        "cue": "Prospect confirms their screen is updated with the audit report. Do not proceed until they are looking at their own numbers.",
+        "stageNote": "Specialist advisor tonality. Eliminate denial by anchoring their eyes on their real data."
+      },
+      {
+        "id": "cbf-closer-l-label",
+        "phase": 2,
+        "phaseName": "L \u2014 LABEL",
+        "section": "L \u2014 Label: Exposing the 3 Red Flags (Mins 2\u20135)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "When the bank's system looked at your application, it flagged three specific red flags.\n\nLook at the first red box at the top of your screen. That\u2019s your Overdue Accounts. The bank saw [X accounts] where payments were missed or fell behind. Even if you made payments later, the bank\u2019s computer sees an open overdue flag and automatically tags your profile as high risk.\n\nNow look at the second box below it. That's your Bank Statement Record. The computer scans your last 90 days for two things: debit orders that didn't go through, and small quick-cash loans. When a bank sees debit orders bouncing or money going to payday lenders, their system automatically flags it as cash-flow stress.\n\nAnd the third box at the bottom is your Debt-to-Income Balance. Right now, the total amount you owe on your cards and store accounts is eating up too much of your monthly salary. Even though you earn enough money to pay for the car, on paper the bank calculates that adding a car instalment and insurance leaves you with almost zero safety buffer.",
+        "cue": "Listen for recognition: 'Yes, that makes sense.' If the prospect launches into a long backstory, execute the 10-Second Compassionate Reset: 'I completely understand life happens, but the bank's computer doesn't read stories\u2014it only reads the numbers.'",
+        "stageNote": "Strictly diagnostic ('What' & 'Why'). Never prescribe 'How' yet. Speak in plain human language."
+      },
+      {
+        "id": "cbf-closer-o-overview",
+        "phase": 3,
+        "phaseName": "O \u2014 OVERVIEW",
+        "section": "O \u2014 Overview: The 2 Fatal DIY Mistakes (Mins 5\u20136)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Now, most people in your shoes make one of two big mistakes right now:\n\nFirst, they run to two or three other car dealerships hoping another bank will say yes. But every time a dealership submits your name, the banks pull your credit record again. When the system sees four or five declines in one month, your score drops further and the banks lock your profile for six months.\n\nThe second mistake is people try to guess what to pay off. They take their hard-earned cash, pay off an old account, but they don't get the legal clearance letter sent to the credit bureaus. Six months later, the bureau still shows the red flag, and the bank declines them again.\n\nIf you try to fix this by guessing, you burn money and end up stuck without a car for another year.",
+        "cue": "Prospect acknowledges: 'I was thinking of going to another dealer' or 'That makes sense.'",
+        "stageNote": "Firm, preventative tone. Stop inquiry suicide and unstructured debt payoff."
+      },
+      {
+        "id": "cbf-closer-s-verifygate",
+        "phase": 4,
+        "phaseName": "S \u2014 SELL THE VACATION",
+        "section": "S \u2014 Sell the Vacation: The Verify Gate & Audit Grant (Mins 6\u20137)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Now, here is the good news:\n\nOur underwriting team ran your numbers through our system, and your profile is 100% fixable within 90 to 120 days.\n\nBecause your file meets all our legal criteria, you officially qualify for our 100% Money-Back Guarantee Recovery Program.\n\nThat means we take your file directly to the credit bureaus, clear these exact three red flags, and rebuild your profile so that when [Dealership Name] re-submits your application, the bank's system gives an automatic green approval.\n\nLet me show you exactly how the recovery program works and how we protect your money...",
+        "cue": "ZERO PAUSE. Pivot directly into the 90-day destination without hanging up or pausing.",
+        "stageNote": "High-value scarcity grant. Confirm qualification before laying out the roadmap."
+      },
+      {
+        "id": "cbf-closer-s-roadmap",
+        "phase": 4,
+        "phaseName": "S \u2014 SELL THE VACATION",
+        "section": "S \u2014 Sell the Vacation: 90\u2013120 Day Destination & SPOA Shield (Mins 7\u20139)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "To get you approved, we don't just give you advice and leave you to do the work. We execute a 10-step recovery roadmap for you.\n\nFirst, we act under a digital Special Power of Attorney. That means our legal compliance team deals directly with the credit bureaus and credit providers on your behalf. You don't have to spend hours on hold or argue with call centers.\n\nSecond, we dispute outdated and unlawful listings, negotiate paid-up clearance certificates, and restructure your profile so the bank's approval algorithm sees you as a prime, low-risk buyer.\n\nAnd third, the moment your file turns green, we notify [Dealership Name] so they can pull your approved car straight onto the delivery floor.",
+        "cue": "Prospect responds: 'That would be a huge relief / How do we start?'",
+        "stageNote": "Sell the destination and hands-free legal shield. Position SPOA as protection."
+      },
+      {
+        "id": "cbf-closer-e-risktax",
+        "phase": 5,
+        "phaseName": "E \u2014 EXPLAIN AWAY CONCERNS",
+        "section": "E \u2014 Explain Concerns: 72-Month Subprime Risk Tax Math (Mins 9\u201311)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Now, look at the interest numbers on your screen for that {{vehicle_price}} vehicle.\n\nRight now, with red flags on your credit, the only places that would even consider you are subprime lenders or rent-to-own schemes charging around {{subprime_rate}} interest.\n\nAt {{subprime_rate}}, you are throwing away {{risk_tax_monthly}} every single month just in interest penalties. That is {{risk_tax_annual}} a year\u2014and over 72 months, that is {{risk_tax_total}} in pure Risk Tax stolen from your family.\n\nOnce we clear your record and get you back to prime bank rates around {{prime_rate}}, you save that entire {{risk_tax_monthly}} every month.\n\nSo fixing your credit isn't an expense\u2014it literally puts {{risk_tax_annual}} back in your bank account every year.",
+        "cue": "Prospect reacts to the numbers: 'That is crazy / I didn't realize it was that much.'",
+        "stageNote": "Anchors the live Risk Tax calculator numbers. Contrast R499/R799 fee against R24,000/yr lost interest."
+      },
+      {
+        "id": "cbf-closer-e-guarantee",
+        "phase": 5,
+        "phaseName": "E \u2014 EXPLAIN AWAY CONCERNS",
+        "section": "E \u2014 Explain Concerns: 100% Guarantee & 4 Golden Rules (Mins 11\u201313)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Because we know our system works, we take on 100% of the risk.\n\nWe give you a written 100% Money-Back Guarantee. If we don't improve your profile and get you bank-ready within our agreed timeline, you get every single cent of your money back. No arguments.\n\nAll we ask is that you follow four simple golden rules while we do the heavy lifting:\n1. Don't apply for any new credit or store cards while we work.\n2. Pay your existing current accounts on time every month.\n3. Don't gamble or bounce debit orders on your bank account.\n4. Respond when our legal team requests a quick signature or clearance proof.\n\nAs long as you do your part, we guarantee the result.",
+        "cue": "Prospect agrees: 'I can definitely do that / That sounds fair.'",
+        "stageNote": "Frame guarantee as a partnership. 4 rules protect our underwriting integrity."
+      },
+      {
+        "id": "cbf-closer-r-activation",
+        "phase": 6,
+        "phaseName": "R \u2014 REINFORCE DECISION",
+        "section": "R \u2014 Reinforce Decision: PayFast Activation & Digital SPOA Lock (Mins 13\u201315)",
+        "type": "rep",
+        "speaker": "CBF Closer",
+        "text": "Awesome. To activate your file and start your legal bureau filings today, there is a one-time activation fee of R499 [or R799 for Tier 2].\n\nI've just popped the secure PayFast link onto your WhatsApp. You can do an instant EFT or card payment safely right now while I'm on the line.\n\nAs soon as that processes, the digital Special Power of Attorney will open up for you to sign with your finger in 10 seconds.\n\nOnce that's signed, our legal team opens your case within 24 hours, and I'll send an official update to the sales team at [Dealership Name] to reserve that vehicle spot for you.\n\nGo ahead and tap that link on your screen now\u2014I'll wait right here while it confirms.",
+        "cue": "Stay on the line while PayFast checkout and digital SPOA signature complete.",
+        "stageNote": "Calm, matter-of-fact tonality. Never hang up before payment and SPOA signature confirm."
+      }
+    ],
+    "objections": [
+      {
+        "id": "obj-cbf-fee",
+        "title": "Why is there an activation fee today?",
+        "triggerKey": "A",
+        "regexPattern": "\\b(activation fee|pay today|why pay now|r499|r799|upfront|free service)\\b",
+        "bulletSummary": "R499/R799 Activation vs R24,000 Annual Risk Tax Bleed",
+        "repScript": "The R499 activation fee covers your forensic legal audits and covers the costs of our compliance team filing direct legal disputes with the bureaus under your Power of Attorney. Remember, waiting or going to a subprime lender burns over R1,500 every single month in penalty interest. Paying R499 once protects you under our 100% Money-Back Guarantee and saves you over R18,000 a year."
+      },
+      {
+        "id": "obj-cbf-guarantee",
+        "title": "Can you guarantee I get approved?",
+        "triggerKey": "G",
+        "regexPattern": "\\b(guarantee|guaranteed|promise|100%|sure|definitely|certain)\\b",
+        "bulletSummary": "100% Money-Back Guarantee on Algorithmic Bank Readiness",
+        "repScript": "No legitimate service can illegally guarantee what a bank will decide, because the banks make the final lending call. What we DO guarantee is your result with our 100% Money-Back Guarantee: if our legal team does not clean your red flags and bring your file into green bank-ready status within 90 to 120 days, we refund every single cent you paid us."
+      },
+      {
+        "id": "obj-cbf-dealer",
+        "title": "Can't I just try another dealership?",
+        "triggerKey": "D",
+        "regexPattern": "\\b(another dealership|other dealer|try somewhere else|another lot|apply elsewhere)\\b",
+        "bulletSummary": "Signio Inquiry Lock \u2014 Multiple Declines Freeze Profile for 6 Months",
+        "repScript": "That is the quickest way to get locked out of vehicle finance for six months. In South Africa, all major dealerships submit applications through the same banking systems. When the banks see 3 or 4 declines in a couple of weeks, their algorithm flags you for credit seeking and locks your profile. Fixing the data with us first ensures your next application is an automatic approval."
+      },
+      {
+        "id": "obj-cbf-blacklisted",
+        "title": "I'm blacklisted / bad credit",
+        "triggerKey": "B",
+        "regexPattern": "\\b(blacklisted|bad credit|adverse|default|judgment|arrears|low score)\\b",
+        "bulletSummary": "Adverse Listing Rehabilitation vs Permanent Brand",
+        "repScript": "That is exactly why [Dealership Name] referred you to Credit Boost Finance! Over 80% of our clients were declined for adverse listings or defaults. Being 'blacklisted' just means there is negative data sitting on your bureau file. Under the National Credit Act, you have the legal right to dispute outdated listings, settle accounts with formal clearance certificates, and clear your record."
+      },
+      {
+        "id": "obj-cbf-scam",
+        "title": "Burnt before / tried other agencies",
+        "triggerKey": "S",
+        "regexPattern": "\\b(scam|scammed|burnt|fraud|tried before|other company|agencies|fly by night)\\b",
+        "bulletSummary": "Direct Dealership Referral Partner & Written Money-Back Guarantee",
+        "repScript": "I completely understand why you're cautious\u2014there are fly-by-night operators who take people's money and disappear. That is why [Dealership Name] directly partners with us and referred you to our deal desk. It's also why we back our work with a written 100% Money-Back Guarantee and an official digital Power of Attorney registered with our legal team."
+      },
+      {
+        "id": "obj-cbf-timeline",
+        "title": "How long will this take?",
+        "triggerKey": "T",
+        "regexPattern": "\\b(how long|time|timeline|urgent|need car now|today|fast|waiting)\\b",
+        "bulletSummary": "90\u2013120 Days Legal Resolution vs Years of Rejections",
+        "repScript": "By law, the credit bureaus have 20 business days to respond to formal legal disputes. Most of our clients have their first major red flags cleared within 60 days, and reach full bank-ready status within 90 to 120 days. We start drafting your dispute notices within 24 hours of receiving your signed SPOA."
+      }
+    ],
+    "failBranches": [
+      {
+        "id": "fail-cbf-unsalvageable",
+        "title": "Path B: Unsalvageable (>12 Mos)",
+        "triggerKey": "K3",
+        "bulletSummary": "Severe Arrears & DTI > 12 Mos \u2014 Compassionate exit & Co-buyer pivot back to dealer",
+        "repScript": "Look [Prospect Name], our underwriting team finished reviewing your full audit, and I want to be 100% transparent with you so we never waste your money. Because we offer a 100% Money-Back Guarantee, we only take on clients we know we can get bank-ready within 90 to 120 days.\n\nWith your current arrears and salary balance, clearing this profile solo would take between 12 and 18 months of aggressive repayments. Charging you our fee wouldn't be fair to you.\n\nWhat we ARE doing is giving you free access to our Safe Spend Budget Reset guide so you can start clearing those accounts yourself. And if you have a spouse, partner, or family member who earns R11,000+ with clean credit, let us know and we can submit them as a co-buyer directly to [Dealership Name] to get the car today."
+      },
+      {
+        "id": "fail-cbf-debtreview",
+        "title": "Active Debt Review / Admin",
+        "triggerKey": "K2",
+        "bulletSummary": "Statutory Legal Lock on ID \u2014 Banks are legally barred from granting vehicle finance under NCA",
+        "repScript": "I see. Look [Prospect Name], I need to be completely honest with you: under the National Credit Act, as long as you have an active Debt Review or Administration notice attached to your ID number, no registered bank or vehicle finance institution in South Africa is legally allowed to approve financing for you.\n\nAny company promising they can get you car finance while under debt review is misleading you. The only way to buy a vehicle is to first receive a formal clearance certificate from your debt counsellor. For now, we cannot take on your file, but we recommend you focus on completing that clearance before applying again."
+      },
+      {
+        "id": "fail-cbf-income",
+        "title": "Income Under R11,000 Net",
+        "triggerKey": "K1",
+        "bulletSummary": "NCA Bank Affordability Rule \u2014 Cannot legally approve solo. Pivot to co-buyer or cheaper car.",
+        "repScript": "Look, [Prospect Name], I want to be 100% straight with you so we don't waste your time. The banks have very strict affordability rules. When they calculate your risk, they look at basic living costs like rent and groceries. Once you add a car payment and insurance on top of that, if you take home under R11,000, the bank's system legally flags it as too high risk and automatically declines it.\n\nRight now, our program wouldn't be able to get you approved on your own with that take-home pay. Your best option right now is to either look at a much cheaper car, or speak to [Dealership Name] about putting a co-buyer on the application with you who earns a bit more."
+      },
+      {
+        "id": "fail-cbf-grossdiscrepancy",
+        "title": "Gross vs. Net Discrepancy",
+        "triggerKey": "K4",
+        "bulletSummary": "Net pay into bank is less than reported on form \u2014 Banks read single-account net deposit.",
+        "repScript": "I see what happened. On the form you put down R[X], but your bank statement shows that after deductions, medical aid, and tax, your actual take-home deposit is lower. The bank's credit algorithm only reads the single net deposit hitting your account, not your gross salary. Because of that, the bank's affordability calculation drops below their lending threshold. Let's look at having a co-buyer join your application to bridge that gap."
       }
     ]
   },
@@ -719,7 +1064,7 @@ const SCRIPT_DATA = {
       "rules": [
         {
           "rule": "MALE VOICE = IMMEDIATE DECISION MAKER ASSUMPTION",
-          "desc": "9/10 independent dealers answering a cell/direct line are the DP or F&I. Never ask 'Can I speak to F&I?'—skip Stage 1 and pitch immediately."
+          "desc": "9/10 independent dealers answering a cell/direct line are the DP or F&I. Never ask 'Can I speak to F&I?'\u2014skip Stage 1 and pitch immediately."
         },
         {
           "rule": "LOCK THE CLOCK-TIME (NO FLOATING WINDOWS)",
@@ -731,18 +1076,18 @@ const SCRIPT_DATA = {
         },
         {
           "rule": "DON'T SURRENDER TO 'SEND AN EMAIL'",
-          "desc": "Bridge the ask: '100%, I’ll send the breakdown right now and hold Thursday at 10:00 AM so we can review it together. Does that work?'"
+          "desc": "Bridge the ask: '100%, I\u2019ll send the breakdown right now and hold Thursday at 10:00 AM so we can review it together. Does that work?'"
         },
         {
           "rule": "PRIVATE F&I IS A COMMISSION TARGET",
-          "desc": "Off-site F&Is want extra approvals. Don't hang up—ask for their off-site broker's name and direct contact line."
+          "desc": "Off-site F&Is want extra approvals. Don't hang up\u2014ask for their off-site broker's name and direct contact line."
         }
       ]
     },
     "somatic": {
       "headline": "4. PHYSIOLOGICAL GROUNDING & VOCAL CADENCE",
-      "boxBreathing": "4-4-4-4 Box Breathing: Inhale 4s • Hold 4s • Exhale 4s • Hold 4s. Drops cortisol, resets working memory.",
-      "vocalPitch": "Drop vocal tone ↘ half an octave. Downward inflection on names and greetings. Never roll words together.",
+      "boxBreathing": "4-4-4-4 Box Breathing: Inhale 4s \u2022 Hold 4s \u2022 Exhale 4s \u2022 Hold 4s. Drops cortisol, resets working memory.",
+      "vocalPitch": "Drop vocal tone \u2198 half an octave. Downward inflection on names and greetings. Never roll words together.",
       "tension": "Hold the Tension: Silence is not danger; tension is where decisions are made. Resist the urge to rush to exit."
     }
   },
@@ -764,7 +1109,7 @@ const SCRIPT_DATA = {
       "section": "1. Introduction (0:00 - 0:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Hey [Name], appreciate you making the time today. I know how busy it gets, floor so I'm going to respect your clock and keep this strictly to 15 minutes.\n\njust need to set the agenda for the meeting : I want to ask a few quick questions about how your finance pipeline is currently running to get a better understanding of your dealership and how your team handles the Rejcted leads. \n\nthen once that is we can just jump to the presentation on how we solved this problem for dealerships around the arear, sounds fair enough? \n",
+      "text": "Hey [Name], appreciate you making the time today. I know how busy it gets, floor so I'm going to respect your clock and keep this strictly to 15 minutes.\n\njust need to set the agenda for the meeting : I want to ask a few quick questions about how your finance pipeline is currently running to get a better understanding of your dealership and how your team handles the Rejcted leads.\u00a0\n\nthen once that is we can just jump to the presentation on how we solved this problem for dealerships around the arear, sounds fair enough?\u00a0\n",
       "cue": "Wait for prospect: 'Fair enough / Sounds good.'",
       "stageNote": "Relaxed, peer-to-peer tonality. Do not rush.",
       "_isCustomEdited": true
@@ -773,10 +1118,10 @@ const SCRIPT_DATA = {
       "id": "clarify-why-now",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "\n2. C — Clarify  (0:45 - 1:30)",
+      "section": "\n2. C \u2014 Clarify\u00a0 (0:45 - 1:30)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Awesome. \nIm going to assume you guys are on Auto trader, Cars and social media right.? ",
+      "text": "Awesome.\u00a0\nIm going to assume you guys are on Auto trader, Cars and social media right.?\u00a0",
       "cue": "Listen actively. Note their exact words (e.g. 'Signio declines', 'unpaids', 'high DTI').",
       "stageNote": "Let them talk without interrupting. Note down their exact vocabulary.",
       "_isCustomEdited": true
@@ -785,10 +1130,10 @@ const SCRIPT_DATA = {
       "id": "clarify-golden-numbers",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "\n2. C — The 3 Golden Numbers (1:30 - 2:30)",
+      "section": "\n2. C \u2014 The 3 Golden Numbers (1:30 - 2:30)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "right and out of those ads how many applications is the D generating on a monthly baises? \n\n1. Roughly how many finance applications is your floor submitting to the banks every month across all lenders?\n\n2. And of those, what percentage would you say are coming back system-declined or turned down on affordability?\n\n3. Got it. So out of {{monthly_apps}} applications, you've got roughly {{declined_units}} people a month getting turned down. What is your team's standard process for those {{declined_units}} customers right now once that decline pops up on Signio?",
+      "text": "right and out of those ads how many applications is the D generating on a monthly baises?\u00a0\n\n1. Roughly how many finance applications is your floor submitting to the banks every month across all lenders?\n\n2. And of those, what percentage would you say are coming back system-declined or turned down on affordability?\n\n3. Got it. So out of {{monthly_apps}} applications, you've got roughly {{declined_units}} people a month getting turned down. What is your team's standard process for those {{declined_units}} customers right now once that decline pops up on Signio?",
       "cue": "Prospect answers: 'Nothing really, the deal just dies / we move on to the next lead.'",
       "stageNote": "Input their exact numbers in the left HUD calculator immediately.",
       "_isCustomEdited": true
@@ -797,7 +1142,7 @@ const SCRIPT_DATA = {
       "id": "clarify-root-cause",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "2. C — Root Cause Diagnostic (2:30 - 3:15)",
+      "section": "2. C \u2014 Root Cause Diagnostic (2:30 - 3:15)",
       "type": "rep",
       "speaker": "Rep",
       "text": "When your leads get rejected by the banks, what is the biggest causation of those rejections you typically see on your desk? Is it accounting errors, debt-to-income, unpaids on their bank statements, or what typically kills the deal?",
@@ -808,10 +1153,10 @@ const SCRIPT_DATA = {
       "id": "clarify-crm-graveyard",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "2. C — The CRM Graveyard (3:15 - 4:00)",
+      "section": "2. C \u2014 The CRM Graveyard (3:15 - 4:00)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "So right now, they basically sit in your CRM graveyard, and that marketing spend is 100% written off?\n\nAnd when that decline comes through—is it your desk that has to deliver the bad news to the buyer, or does the sales executive handle it?\n\nI hear that every day. You spend 45 minutes capturing the deal, structuring the file, chasing 3 months of bank statements—only to do unpaid administrative therapy for someone who can't get approved.",
+      "text": "So right now, they basically sit in your CRM graveyard, and that marketing spend is 100% written off?\n\nAnd when that decline comes through\u2014is it your desk that has to deliver the bad news to the buyer, or does the sales executive handle it?\n\nI hear that every day. You spend 45 minutes capturing the deal, structuring the file, chasing 3 months of bank statements\u2014only to do unpaid administrative therapy for someone who can't get approved.",
       "cue": "Prospect expresses frustration with awkward conversations and wasted desk hours.",
       "stageNote": "Validate their frustration. Builds deep alliance with the desk."
     },
@@ -819,10 +1164,10 @@ const SCRIPT_DATA = {
       "id": "label-problem-bleed",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "3. L — Label the Problem (4:00 - 4:45)",
+      "section": "3. L \u2014 Label the Problem (4:00 - 4:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "So let me play the board back to you to make sure I have this 100% accurate:\n\nYou're submitting roughly {{monthly_apps}} applications a month.\n{{decline_rate}}% are getting turned down by the banks.\nThat is {{declined_units}} prospective buyers every single month who walked into your showroom, picked a vehicle, signed paperwork, and were ready to buy—who then walked out empty-handed.\n\nEven at a conservative gross profit of {{avg_margin}} per unit between the metal, doc fees, and finance commission...\n\nThis floor is forfeiting roughly {{monthly_bleed}} in gross profit every single month to bank algorithms.\n\nThat is what we call the 50% Fallout Bleed.\n\nHow long has your floor been bleeding that gross?",
+      "text": "So let me play the board back to you to make sure I have this 100% accurate:\n\nYou're submitting roughly {{monthly_apps}} applications a month.\n{{decline_rate}}% are getting turned down by the banks.\nThat is {{declined_units}} prospective buyers every single month who walked into your showroom, picked a vehicle, signed paperwork, and were ready to buy\u2014who then walked out empty-handed.\n\nEven at a conservative gross profit of {{avg_margin}} per unit between the metal, doc fees, and finance commission...\n\nThis floor is forfeiting roughly {{monthly_bleed}} in gross profit every single month to bank algorithms.\n\nThat is what we call the 50% Fallout Bleed.\n\nHow long has your floor been bleeding that gross?",
       "cue": "Pause firmly for 2 seconds. Let the {{monthly_bleed}} figure sit in silence.",
       "stageNote": "Eye contact. Never apologize for their real numbers."
     },
@@ -830,10 +1175,10 @@ const SCRIPT_DATA = {
       "id": "overview-past-attempts",
       "phase": 1,
       "phaseName": "PHASE 1: DIAGNOSIS",
-      "section": "4. O — Overview Past Experience (4:45 - 5:45)",
+      "section": "4. O \u2014 Overview Past Experience (4:45 - 5:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "And over that time—has your dealership attempted anything internally or worked with third parties to recover those declined customers, or has the file just stayed dead?\n\n[If they say No]: Why is that?\n\nMakes total sense. But let me ask you: If your floor was able to get even 15 or 20 of those turned-down buyers back as approved deals... roughly how much gross revenue would that represent for this store?\n\nAnd how would banking an extra R300k+ in recovered margin every single month change your business?\n\nSo what is currently stopping you guys from actually making that money back right now?",
+      "text": "And over that time\u2014has your dealership attempted anything internally or worked with third parties to recover those declined customers, or has the file just stayed dead?\n\n[If they say No]: Why is that?\n\nMakes total sense. But let me ask you: If your floor was able to get even 15 or 20 of those turned-down buyers back as approved deals... roughly how much gross revenue would that represent for this store?\n\nAnd how would banking an extra R300k+ in recovered margin every single month change your business?\n\nSo what is currently stopping you guys from actually making that money back right now?",
       "cue": "\n",
       "stageNote": "\n",
       "_isCustomEdited": true
@@ -842,10 +1187,10 @@ const SCRIPT_DATA = {
       "id": "vacation-origin-mission",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — Origin & 80% Approval Mission (5:45 - 6:45)",
+      "section": "5. S \u2014 Origin & 80% Approval Mission (5:45 - 6:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "That exact problem is actually why our company exists.\n\nWe originally started as Volve Media—an automotive advertising agency. We spent years generating thousands of leads for dealerships across South Africa. The ads worked, the showrooms were full, but month after month, Dealer Principals kept telling us:\n'Guys, the leads are here, but over half of them are getting declined at the bank.'\n\nThat's when we made a decision: we didn't just want to be another marketing agency dumping raw traffic onto an F&I desk. We decided to solve the credit bottleneck directly so we could become the only agency in the country delivering an 80%+ bank finance approval rate on the buyers we bring in.",
+      "text": "That exact problem is actually why our company exists.\n\nWe originally started as Volve Media\u2014an automotive advertising agency. We spent years generating thousands of leads for dealerships across South Africa. The ads worked, the showrooms were full, but month after month, Dealer Principals kept telling us:\n'Guys, the leads are here, but over half of them are getting declined at the bank.'\n\nThat's when we made a decision: we didn't just want to be another marketing agency dumping raw traffic onto an F&I desk. We decided to solve the credit bottleneck directly so we could become the only agency in the country delivering an 80%+ bank finance approval rate on the buyers we bring in.",
       "cue": "\n",
       "stageNote": "\n",
       "_isCustomEdited": true
@@ -854,10 +1199,10 @@ const SCRIPT_DATA = {
       "id": "vacation-core-philosophy",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — Financing is Math & Risk (6:45 - 7:45)",
+      "section": "5. S \u2014 Financing is Math & Risk (6:45 - 7:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "When we first set out to crack this, we honestly thought there was nothing we could do—we assumed bank underwriting was this magic secret that nobody outside the banking halls could ever understand, and that the leads were doomed forever.\n\nBut we realized that's not completely true.\n\nWhat we discovered is that it's actually not a mystery at all:\nVehicle financing is purely a math and risk management problem.\n\nThe banks actually want to approve more cars—they make zero profit when they decline your customer. But they need to ensure they don't lend money to people who show behavioral signs of defaulting. The banks determine that by checking key specific factors that we have narrowed down to an exact science.",
+      "text": "When we first set out to crack this, we honestly thought there was nothing we could do\u2014we assumed bank underwriting was this magic secret that nobody outside the banking halls could ever understand, and that the leads were doomed forever.\n\nBut we realized that's not completely true.\n\nWhat we discovered is that it's actually not a mystery at all:\nVehicle financing is purely a math and risk management problem.\n\nThe banks actually want to approve more cars\u2014they make zero profit when they decline your customer. But they need to ensure they don't lend money to people who show behavioral signs of defaulting. The banks determine that by checking key specific factors that we have narrowed down to an exact science.",
       "cue": "Prospect nods in agreement. They know banks want interest but follow scorecards.",
       "stageNote": "Confident, authoritative tonality. You are speaking as financial engineers."
     },
@@ -865,7 +1210,7 @@ const SCRIPT_DATA = {
       "id": "vacation-two-buckets",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — The Two Buckets (7:45 - 8:30)",
+      "section": "5. S \u2014 The Two Buckets (7:45 - 8:30)",
       "type": "rep",
       "speaker": "Rep",
       "text": "Now, to be completely transparent: not every declined buyer can be saved.\n\nThe very first thing our underwriting desk does when a file enters our system is split them into two distinct buckets:\n\nBucket 1: The Truly Unrecoverable. People under active administration, formal debt review (Section 86), active court judgments, or zero verifiable income. There is no legal mechanism to put them in a car right now. We do not touch them, and we will never waste your time pretending we can.\n\nBucket 2: The Recoverable Pipeline. These are real, employed buyers with stable salaries and genuine purchase intent, but who tripped automated bank tripwires.\n\nThis second bucket represents 70% to 80% of your showroom turn-downs. This is the only place we operate.",
@@ -876,10 +1221,10 @@ const SCRIPT_DATA = {
       "id": "vacation-three-questions",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — The 3 Questions Every Bank Asks (8:30 - 9:30)",
+      "section": "5. S \u2014 The 3 Questions Every Bank Asks (8:30 - 9:30)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "When a bank looks at your declined customer, they aren't looking at some mysterious code. Their algorithm is really just asking three simple questions:\n\n1. The Debt Question:\n'Does this person owe anyone money right now, and are they actually paying the people they owe on time—or are there unpaid accounts and old arrears hanging over their head?'\n\n2. The Bread Question:\n'After they've paid everyone they owe, do they have enough money left over to pay our vehicle installment every month and still buy bread for their family for the next 30 days?'\n\n3. The Conduct Question:\n'And day-to-day, how does this person actually live with their money? Are debit orders bouncing, are they living inside an overdraft with zero buffer—or do their bank statements show someone who manages cash responsibly?'\n\nIf an applicant fails even one of those three questions, the bank's system kicks them out.\n\nSimply put: what Credit Builder Flow does is get your declined buyers to live their lives for 90 days as if they already own the vehicle. We clean up their accounts, fix their cash buffer, eliminate unpaids, and simply prove to the banks that they can comfortably afford this car.",
+      "text": "When a bank looks at your declined customer, they aren't looking at some mysterious code. Their algorithm is really just asking three simple questions:\n\n1. The Debt Question:\n'Does this person owe anyone money right now, and are they actually paying the people they owe on time\u2014or are there unpaid accounts and old arrears hanging over their head?'\n\n2. The Bread Question:\n'After they've paid everyone they owe, do they have enough money left over to pay our vehicle installment every month and still buy bread for their family for the next 30 days?'\n\n3. The Conduct Question:\n'And day-to-day, how does this person actually live with their money? Are debit orders bouncing, are they living inside an overdraft with zero buffer\u2014or do their bank statements show someone who manages cash responsibly?'\n\nIf an applicant fails even one of those three questions, the bank's system kicks them out.\n\nSimply put: what Credit Builder Flow does is get your declined buyers to live their lives for 90 days as if they already own the vehicle. We clean up their accounts, fix their cash buffer, eliminate unpaids, and simply prove to the banks that they can comfortably afford this car.",
       "cue": "Prospect recognizes that clean 90-day conduct unlocks bank approvals.",
       "stageNote": "Count 1, 2, 3 on your hands. The 'buy bread for 30 days' line lands hard."
     },
@@ -887,10 +1232,10 @@ const SCRIPT_DATA = {
       "id": "vacation-three-timelines",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — The 3 Recovery Timelines & Case Studies (Slide 11)",
+      "section": "5. S \u2014 The 3 Recovery Timelines & Case Studies (Slide 11)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Because every customer's financial profile is unique, every single lead you refer to us falls into one of three distinct categories:\n\nCategory 1: Deep Restructuring (6 Months+)\nDealerships typically hate this category because it takes the longest to pay out, but roughly 10% to 20% of your turned-down paper lands here. A great example is Lawrence. His Debt-to-Income ratio was over 80% of his salary. The reason a lead like Lawrence takes 6 months is because when someone has a mountain of bills, all their money goes to debt service. You can't show affordability while someone is drowning in debt payments. First 60 days: we aggressively restructure and pay down debt. Next 90 days: he lives with clean bank conduct to prove surplus cash flow. 60 days to clear debt + 90 days of clean banking = roughly 6 months to turn a dead file into a banked delivery.\n\nCategory 2: The Core (90 Days)\nThis is the meat and potatoes of your turned-down paper—roughly 70% to 80% of all the leads you refer will fall right here. A great example is Busi. He had substantial arrears, but his real bottleneck was banking conduct—unpaids and an overdraft that gave him a near-zero approval probability. Settling debt is only half the battle; banks demand three consecutive months of clean statement conduct. First 30 days: settled arrears and waited for the 30-day bureau cycle. Simultaneously over 90 days: coached him through three months of disciplined banking, living as if he already paid the car installment. On day 90, fresh prime-grade statements were pulled, re-applied on Signio, and funded.\n\nCategory 3: Quick Wins (45 to 60 Days)\nThese are the fastest turnarounds—roughly 10% of leads land here. A great example is Khumbuzile. Earning over R25,000 a month with flawless banking conduct, but declined across all lenders over a three-month overdue MTN account for just R300. His banking habits and affordability were already solid. The only bottleneck was bureau lag: creditors and bureaus only reconcile ledgers once a month on billing cycles. Immediate settlement of the R300 + 30-day reporting cycle. By day 45, his credit record was clear, re-captured on Signio, and approved immediately.\n\nNotice that across all three leads—Lawrence, Busi, and Khumbuzile—we never asked the dealership to wait with them or do any work. You sent the referral link, our desk managed the calendar, and your floor banked the delivery.",
+      "text": "Because every customer's financial profile is unique, every single lead you refer to us falls into one of three distinct categories:\n\nCategory 1: Deep Restructuring (6 Months+)\nDealerships typically hate this category because it takes the longest to pay out, but roughly 10% to 20% of your turned-down paper lands here. A great example is Lawrence. His Debt-to-Income ratio was over 80% of his salary. The reason a lead like Lawrence takes 6 months is because when someone has a mountain of bills, all their money goes to debt service. You can't show affordability while someone is drowning in debt payments. First 60 days: we aggressively restructure and pay down debt. Next 90 days: he lives with clean bank conduct to prove surplus cash flow. 60 days to clear debt + 90 days of clean banking = roughly 6 months to turn a dead file into a banked delivery.\n\nCategory 2: The Core (90 Days)\nThis is the meat and potatoes of your turned-down paper\u2014roughly 70% to 80% of all the leads you refer will fall right here. A great example is Busi. He had substantial arrears, but his real bottleneck was banking conduct\u2014unpaids and an overdraft that gave him a near-zero approval probability. Settling debt is only half the battle; banks demand three consecutive months of clean statement conduct. First 30 days: settled arrears and waited for the 30-day bureau cycle. Simultaneously over 90 days: coached him through three months of disciplined banking, living as if he already paid the car installment. On day 90, fresh prime-grade statements were pulled, re-applied on Signio, and funded.\n\nCategory 3: Quick Wins (45 to 60 Days)\nThese are the fastest turnarounds\u2014roughly 10% of leads land here. A great example is Khumbuzile. Earning over R25,000 a month with flawless banking conduct, but declined across all lenders over a three-month overdue MTN account for just R300. His banking habits and affordability were already solid. The only bottleneck was bureau lag: creditors and bureaus only reconcile ledgers once a month on billing cycles. Immediate settlement of the R300 + 30-day reporting cycle. By day 45, his credit record was clear, re-captured on Signio, and approved immediately.\n\nNotice that across all three leads\u2014Lawrence, Busi, and Khumbuzile\u2014we never asked the dealership to wait with them or do any work. You sent the referral link, our desk managed the calendar, and your floor banked the delivery.",
       "cue": "Prospect absorbs the 3 realistic timelines without false promises.",
       "stageNote": "Deliver Lawrence, Busi, and Khumbuzile with steady 30-second cadence."
     },
@@ -898,10 +1243,10 @@ const SCRIPT_DATA = {
       "id": "vacation-zero-lift",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — Zero-Lift Desk Reality (Direct Callback)",
+      "section": "5. S \u2014 Zero-Lift Desk Reality (Direct Callback)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Remember when you told me earlier that right now, when a deal declines, your desk has to deliver the bad news, do unpaid therapy, and the lead just dies in your CRM?\n\nHere is how we change that completely:\n\nInstead of doing any of that, your team now only does one single thing: you just send our referral link to the customer. That's it.\n\nFrom that exact second, our team takes over and handles everything else off-site. You don't counsel them. You don't audit statements. We work with the customer directly to resolve the limiting blockages that caused the decline in the first place.\n\nThe next time your desk touches that file, you simply re-submit the application to the banks on Signio—only now, with a clean, bank-ready profile that gets approved.\n\nSend a link -> take the approval -> deliver the vehicle.",
+      "text": "Remember when you told me earlier that right now, when a deal declines, your desk has to deliver the bad news, do unpaid therapy, and the lead just dies in your CRM?\n\nHere is how we change that completely:\n\nInstead of doing any of that, your team now only does one single thing: you just send our referral link to the customer. That's it.\n\nFrom that exact second, our team takes over and handles everything else off-site. You don't counsel them. You don't audit statements. We work with the customer directly to resolve the limiting blockages that caused the decline in the first place.\n\nThe next time your desk touches that file, you simply re-submit the application to the banks on Signio\u2014only now, with a clean, bank-ready profile that gets approved.\n\nSend a link -> take the approval -> deliver the vehicle.",
       "cue": "Prospect realizes this removes work from their desk rather than adding to it.",
       "stageNote": "Stress the phrase 'one single thing: send the link.' F&Is love zero admin."
     },
@@ -909,10 +1254,10 @@ const SCRIPT_DATA = {
       "id": "vacation-exclusivity",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — Lead Exclusivity: Worst-Case Socratic Lock",
+      "section": "5. S \u2014 Lead Exclusivity: Worst-Case Socratic Lock",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Now, the first question every sharp Dealer Principal and F&I asks is:\n'What stops you from taking my rehabilitated buyer and selling them to the dealership down the road?'\n\nLet's actually play that worst-case scenario out together:\n\nAssuming we did that scummy thing—we took your declined buyer, cleaned them up, and shopped them to your competitor down the road. And you inevitably found out. What would be your immediate next move?\n\n[Wait for Dealer/F&I to answer: 'I'd stop working with you immediately, cancel the agreement, and kick you out.']\n\nExactly. And in the South African dealership community—because everyone knows each other and DPs talk—what happens next when you tell your network and your friends in the industry what we did?\n\n[Wait for Dealer/F&I: 'Nobody would work with you. You'd be blacklisted.']\n\n100%. So how long do you think our business would survive in this market playing that game?\n\n[Dealer/F&I: 'Not very long. You'd be out of business in a few months.']\n\nSpot on. It's commercial suicide. Now contrast that with the real math: If we honor complete exclusivity, keep every lead locked to your showroom, and rehabilitate 20, 30, 50 of your turned-down buyers every year at R6,000 to R10,000 a deal... how much more money do we make together over the next 3 to 5 years?\n\n[Dealer/F&I: 'Hundreds of thousands. Way more than flipping a single deal.']\n\nExactly. Morals aside, the pure economics guarantee that we only win when that car drives off YOUR showroom floor. That is why our exclusivity is legally hardcoded into our bilateral pilot agreement.",
+      "text": "Now, the first question every sharp Dealer Principal and F&I asks is:\n'What stops you from taking my rehabilitated buyer and selling them to the dealership down the road?'\n\nLet's actually play that worst-case scenario out together:\n\nAssuming we did that scummy thing\u2014we took your declined buyer, cleaned them up, and shopped them to your competitor down the road. And you inevitably found out. What would be your immediate next move?\n\n[Wait for Dealer/F&I to answer: 'I'd stop working with you immediately, cancel the agreement, and kick you out.']\n\nExactly. And in the South African dealership community\u2014because everyone knows each other and DPs talk\u2014what happens next when you tell your network and your friends in the industry what we did?\n\n[Wait for Dealer/F&I: 'Nobody would work with you. You'd be blacklisted.']\n\n100%. So how long do you think our business would survive in this market playing that game?\n\n[Dealer/F&I: 'Not very long. You'd be out of business in a few months.']\n\nSpot on. It's commercial suicide. Now contrast that with the real math: If we honor complete exclusivity, keep every lead locked to your showroom, and rehabilitate 20, 30, 50 of your turned-down buyers every year at R6,000 to R10,000 a deal... how much more money do we make together over the next 3 to 5 years?\n\n[Dealer/F&I: 'Hundreds of thousands. Way more than flipping a single deal.']\n\nExactly. Morals aside, the pure economics guarantee that we only win when that car drives off YOUR showroom floor. That is why our exclusivity is legally hardcoded into our bilateral pilot agreement.",
       "cue": "Dealer/F&I explicitly states that stealing leads is commercial suicide.",
       "stageNote": "Let them answer each question. Do not skip the Socratic responses."
     },
@@ -920,10 +1265,10 @@ const SCRIPT_DATA = {
       "id": "vacation-commercials",
       "phase": 2,
       "phaseName": "PHASE 2: SELLING THE VACATION",
-      "section": "5. S — Performance Commercials & Destination Math",
+      "section": "5. S \u2014 Performance Commercials & Destination Math",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Here is how our commercial partnership is structured:\n\n• Vehicles under R130,000: Flat handling fee of R6,000 upon successful delivery.\n• Vehicles R130,000 and above: 5.0% of the vehicle retail price upon successful delivery.\n\n• R0 Upfront cost.\n• R0 Monthly retainers.\n• R0 Platform or tech fees.\n\nOur fee is payable ONLY once the vehicle is delivered and funded by the bank. If that customer does not take delivery of a car from your floor, you owe us absolutely nothing.\n\nAnd destination math: Right now, you've got roughly {{declined_units}} turned-down files in your CRM graveyard generating exactly R0. Even if our desk only recovers {{recovered_units}} of those buyers a month, that is roughly {{recovered_revenue}} in net new gross profit and F&I commission that was otherwise dead money.\n\nYou are essentially unlocking found money at zero capital risk.",
+      "text": "Here is how our commercial partnership is structured:\n\n\u2022 Vehicles under R130,000: Flat handling fee of R6,000 upon successful delivery.\n\u2022 Vehicles R130,000 and above: 5.0% of the vehicle retail price upon successful delivery.\n\n\u2022 R0 Upfront cost.\n\u2022 R0 Monthly retainers.\n\u2022 R0 Platform or tech fees.\n\nOur fee is payable ONLY once the vehicle is delivered and funded by the bank. If that customer does not take delivery of a car from your floor, you owe us absolutely nothing.\n\nAnd destination math: Right now, you've got roughly {{declined_units}} turned-down files in your CRM graveyard generating exactly R0. Even if our desk only recovers {{recovered_units}} of those buyers a month, that is roughly {{recovered_revenue}} in net new gross profit and F&I commission that was otherwise dead money.\n\nYou are essentially unlocking found money at zero capital risk.",
       "cue": "Prospect realizes they have zero capital exposure and high upside.",
       "stageNote": "Rhythmically hit the R0 lines. Transition to the close."
     },
@@ -931,10 +1276,10 @@ const SCRIPT_DATA = {
       "id": "close-authority-check",
       "phase": 3,
       "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-      "section": "6. E — Authority Litmus Check (10:00 - 10:45)",
+      "section": "6. E \u2014 Authority Litmus Check (10:00 - 10:45)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Now, [Name], when it comes to plugging in an off-site recovery desk to rescue these declined files—is that a workflow you have the authority to green-light yourself on your desk, or does every service agreement go strictly through the Dealer Principal?",
+      "text": "Now, [Name], when it comes to plugging in an off-site recovery desk to rescue these declined files\u2014is that a workflow you have the authority to green-light yourself on your desk, or does every service agreement go strictly through the Dealer Principal?",
       "cue": "Branch:\nIf DP -> Proceed directly to the Layup & 3 Decisions.\nIf F&I -> 'Makes complete sense. If this were entirely your decision and [DP] had already approved the budget, would you personally want this on your desk this month?'",
       "stageNote": "Now that they love the vacation, authority qualification has zero friction."
     },
@@ -942,10 +1287,10 @@ const SCRIPT_DATA = {
       "id": "close-dp-layup",
       "phase": 3,
       "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-      "section": "6. E — The Dealer Principal Layup (10:45 - 12:00)",
+      "section": "6. E \u2014 The Dealer Principal Layup (10:45 - 12:00)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "[DP Name], I hear you 100%.\n\nWhenever a dealer principal tells me they need time to weigh this up, I always have this visual of them sitting alone in their office tonight with a cup of coffee, staring at the ceiling for two hours weighing this up.\n\nBut you and I both know that's not what happens.\n\nWhat actually happens is: you walk out of this room, someone corners you about a trade-in appraisal, a customer has a complaint on delivery, you've got floorplan interest to review, and you spend the rest of the day putting out fires.\n\nNext week, your F&I hands you the weekly pack. You see another 10 to 15 bank turn-downs on the sheet. The cycle repeats, and two months from now, life made the decision for you by default—and the store is in the exact same spot, bleeding {{monthly_bleed}} every month.\n\nInstead of letting the calendar make that call for you, let's look at the only three decisions that are actually on the table today:",
+      "text": "[DP Name], I hear you 100%.\n\nWhenever a dealer principal tells me they need time to weigh this up, I always have this visual of them sitting alone in their office tonight with a cup of coffee, staring at the ceiling for two hours weighing this up.\n\nBut you and I both know that's not what happens.\n\nWhat actually happens is: you walk out of this room, someone corners you about a trade-in appraisal, a customer has a complaint on delivery, you've got floorplan interest to review, and you spend the rest of the day putting out fires.\n\nNext week, your F&I hands you the weekly pack. You see another 10 to 15 bank turn-downs on the sheet. The cycle repeats, and two months from now, life made the decision for you by default\u2014and the store is in the exact same spot, bleeding {{monthly_bleed}} every month.\n\nInstead of letting the calendar make that call for you, let's look at the only three decisions that are actually on the table today:",
       "cue": "Pause 1s after 'staring at the ceiling'. Watch for their smile or nod.",
       "stageNote": "Warm, conversational, slightly amused tonality. Never confrontational."
     },
@@ -953,10 +1298,10 @@ const SCRIPT_DATA = {
       "id": "close-three-decisions",
       "phase": 3,
       "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-      "section": "6. E — The 3 Decisions Anchor (12:00 - 13:30)",
+      "section": "6. E \u2014 The 3 Decisions Anchor (12:00 - 13:30)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Decision 1: You choose not to work with us.\nNothing changes. Your desk continues to let turned-down buyers walk, and this store continues to forfeit roughly {{monthly_bleed}} in retail gross every month to bank algorithms.\n\nDecision 2: You test us, and we fall flat on our face.\nWe take your declined files from last week, we don't recover a single vehicle, and we fail. Because we take zero upfront fees and our portal handles the heavy lifting, your desk lost zero selling hours, your banks were untouched, and you paid zero retainers. You are in the exact same spot you're in right now.\n\nDecision 3: It works exactly like we showed you.\nWe take the {{declined_units}} buyers your banks turned down, our underwriters remediate the bureau blockers, and we put just {{recovered_units}} extra banked deals over your curb this month. That's {{recovered_revenue}} in retained gross profit that was already written off as dead money.\n\nBetween Decision 1 and Decision 2, your downside is identical—you lose nothing. But Decision 3 puts {{recovered_units}} extra units on your board every month.\n\nIf a decision carries zero downside, why not make the call that actually has the upside for your floor?",
+      "text": "Decision 1: You choose not to work with us.\nNothing changes. Your desk continues to let turned-down buyers walk, and this store continues to forfeit roughly {{monthly_bleed}} in retail gross every month to bank algorithms.\n\nDecision 2: You test us, and we fall flat on our face.\nWe take your declined files from last week, we don't recover a single vehicle, and we fail. Because we take zero upfront fees and our portal handles the heavy lifting, your desk lost zero selling hours, your banks were untouched, and you paid zero retainers. You are in the exact same spot you're in right now.\n\nDecision 3: It works exactly like we showed you.\nWe take the {{declined_units}} buyers your banks turned down, our underwriters remediate the bureau blockers, and we put just {{recovered_units}} extra banked deals over your curb this month. That's {{recovered_revenue}} in retained gross profit that was already written off as dead money.\n\nBetween Decision 1 and Decision 2, your downside is identical\u2014you lose nothing. But Decision 3 puts {{recovered_units}} extra units on your board every month.\n\nIf a decision carries zero downside, why not make the call that actually has the upside for your floor?",
       "cue": "Deliver seamlessly without asking permission between decisions.",
       "stageNote": "Let the logic sink in. Hold eye contact."
     },
@@ -964,10 +1309,10 @@ const SCRIPT_DATA = {
       "id": "close-sandbox-pilot-lock",
       "phase": 3,
       "phaseName": "PHASE 3: RESOLUTION & CLOSE",
-      "section": "7. R — The 30-Day Sandbox Pilot Lock (13:30 - 15:00)",
+      "section": "7. R \u2014 The 30-Day Sandbox Pilot Lock (13:30 - 15:00)",
       "type": "rep",
       "speaker": "Rep",
-      "text": "Look [Name], we don't need a complex multi-year contract or a massive operational rollout to prove this works.\n\nHere is what I propose: Let's do a 30-Day Sandbox Pilot. Send our desk 5 to 10 of last week's dead, declined files—customers who walked off your lot and who you've already written off as lost revenue.\n\nWe will onboard them, separate the unrecoverable files, and put the recoverable buyers onto their rehabilitation track. If we don't produce clean, pre-approved buyers ready to take delivery from your floor, you walk away having spent zero Rand.\n\nCan we grab 5 of last week's declined files off Signio today so we can get started?",
+      "text": "Look [Name], we don't need a complex multi-year contract or a massive operational rollout to prove this works.\n\nHere is what I propose: Let's do a 30-Day Sandbox Pilot. Send our desk 5 to 10 of last week's dead, declined files\u2014customers who walked off your lot and who you've already written off as lost revenue.\n\nWe will onboard them, separate the unrecoverable files, and put the recoverable buyers onto their rehabilitation track. If we don't produce clean, pre-approved buyers ready to take delivery from your floor, you walk away having spent zero Rand.\n\nCan we grab 5 of last week's declined files off Signio today so we can get started?",
       "cue": "Prospect agrees to pull 5 files to test.",
       "stageNote": "Lock the operational next step. Keep friction at absolute zero."
     }
@@ -1003,7 +1348,7 @@ const SCRIPT_DATA = {
       "triggerKey": "T",
       "regexPattern": "\\b(90 days is too long|three months is too long|take too long|customer will walk)\\b",
       "bulletSummary": "Signio-Wide Decline Lock",
-      "repScript": "That would be true if the customer was financeable today. But remember: they were turned down on Signio across all 4 major banks. They cannot buy from your competitor today either. When their credit is fixed legally by our desk, they buy from the dealership that helped them—which is you."
+      "repScript": "That would be true if the customer was financeable today. But remember: they were turned down on Signio across all 4 major banks. They cannot buy from your competitor today either. When their credit is fixed legally by our desk, they buy from the dealership that helped them\u2014which is you."
     },
     {
       "id": "obj-data-buyer",
