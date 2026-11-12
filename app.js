@@ -2070,9 +2070,14 @@
           throw new Error('Save API returned ' + res.status);
         }
       } catch (err) {
-        btnSaveDisk.textContent = 'Saved in Browser Cache';
-        alert('Saved to local browser storage! Note: Make sure "node server.js" is running to save directly to disk.');
-        setTimeout(() => { btnSaveDisk.textContent = '💾 Save Directly to File'; }, 2500);
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
+          }
+        } catch (clipErr) {}
+        btnSaveDisk.textContent = '✔ Copied to Clipboard!';
+        alert('Edits saved in browser & copied to clipboard!\n\nJust paste (Ctrl+V) into Antigravity so I can commit them permanently to GitHub for the team.');
+        setTimeout(() => { btnSaveDisk.textContent = '💾 Save Directly to File'; }, 3000);
       }
     });
   }
